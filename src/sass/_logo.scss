@@ -1,0 +1,56 @@
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-65%, -50%);
+  width: 20rem;
+  z-index: 999;
+
+  @media (min-width: $md) {
+    top: 0;
+    left: 3rem;
+    transform: none;
+    width: 30rem;
+    height: $desktop-logo-height;
+    background-image: url('/assets/desktop-logo-bg.jpg');
+    background-size: auto 100%;
+    background-position: bottom center;
+  }
+
+  .horizontal {
+    display: block;
+
+    svg { width: 100%; }
+  }
+
+  .vertical {
+    display: none;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: calc(100% - 12rem);
+    }
+  }
+
+  &.desktop {
+    display: none;
+    top: -7rem;
+  }
+
+  @media (min-width: $md) {
+    &.desktop { display: block; }
+
+    &.mobile { display: none; }
+
+    .horizontal { display: none; }
+
+    .vertical { display: block; }
+  }
+}

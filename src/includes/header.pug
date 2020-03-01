@@ -1,0 +1,11 @@
+header
+  .logo.mobile
+    include logo
+  nav
+    ul
+      each val, key in NAVIGATION
+        li
+          if active === key
+            span.active #{key}
+          else
+            a(href=val, title=key, target='_self')= key

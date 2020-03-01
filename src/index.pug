@@ -1,0 +1,38 @@
+include components/mixins/all
+
+block nav
+  - active = 'Home'
+
+doctype html
+html(lang='en')
+  head
+    include includes/head
+  body.home
+    .wrapper
+      include includes/header
+      .page-content
+        .logo.desktop
+          include includes/logo
+        .intro
+          +info()
+          +banner('assets/hp-banner.jpg')
+        .main-content
+          .hp-teasers
+            +teaser('Instappen kan op elk moment', '../assets/image_01.jpg', '#')
+              p
+                | Heb je zin om te proeven van een authentieke Japanse krijgskunst? De beste manier om Aikido te ontdekken, is mee op de mat stappen. Nieuwkomers zijn op ieder moment in het seizoen van harte welkom.
+            +teaser('Waarom aikido?', '../assets/image_02.jpg', '#')
+              p
+                | Waarom doen we aikido? Op deze vraag is er geen eenduidig antwoord. Aikido is rijk genoeg opdat iedereen er verschillende dingen kan uithalen die voor hem of haar belangrijk zijn.
+          .news
+            h2 Nieuws
+            ul
+              each val, key in NEWS
+                +news-teaser(NEWS[key].href, NEWS[key].image, NEWS[key].title, NEWS[key].text)
+              //+news-teaser('#', 'assets/news_01.jpg', '25 jaar Go Ryu dojo Ban Sen Juku Gent', 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur.')
+              //+news-teaser('#', 'assets/news_02.jpg', 'Instappen is mogelijk op ieder moment', 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur.')
+              //+news-teaser('#', null, 'Seizoensstart 2018-2019 op dinsdag 14 augustus', 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur.')
+              //+news-teaser('#', 'assets/news_03.jpg', 'Ban Sen Juku viert 30ste verjaardag', 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur.')
+        include includes/footer
+    .hamburger
+    include includes/scripts

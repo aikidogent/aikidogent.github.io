@@ -1,0 +1,21 @@
+// border
+$default-border: 1px solid $border-color;
+
+// box shadow
+$default-box-shadow: 0 0 20px 0 rgba(0, 0, 0, .1);
+$hover-box-shadow: 0 0 30px 0 rgba(0, 0, 0, .2);
+
+// transition
+$default-transition: .25s ease;
+
+// general settings
+$mobile-header-height: 11rem;
+$desktop-header-height: 6rem;
+$desktop-logo-height: 37rem;
+
+// media queries
+$xs: 320px;
+$sm: 640px;
+$md: 960px;
+$lg: 1024px;
+$xl: 1280px;

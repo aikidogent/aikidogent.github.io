@@ -1,0 +1,20 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: $mobile-header-height;
+  width: 100%;
+  background-image: url('/assets/mobile-header-bg.jpg');
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  z-index: 997;
+
+  @media (min-width: $md) {
+    position: fixed;
+    background-color: $white;
+    background-image: none;
+    height: $desktop-header-height;
+    border-bottom: .4rem solid $primary;
+    box-shadow: $default-box-shadow;
+  }
+}

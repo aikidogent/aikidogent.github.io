@@ -1,0 +1,14 @@
+body.home {
+  .hp-teasers {
+    @media screen and (min-width: $sm) {
+      display: flex;
+      align-items: stretch;
+
+      .teaser {
+        width: calc(50% - 1.5rem);
+
+        &:first-child { margin-right: 3rem; }
+      }
+    }
+  }
+}
