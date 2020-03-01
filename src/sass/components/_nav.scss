@@ -1,8 +1,13 @@
 nav {
+  display: none;
   position: relative;
   max-width: 120rem;
   margin: 0 auto;
   height: $desktop-header-height;
+
+  @media (min-width: $md) {
+    display: block;
+  }
 
   ul {
     position: absolute;
