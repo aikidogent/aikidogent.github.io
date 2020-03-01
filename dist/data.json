@@ -1,0 +1,35 @@
+{
+	"NAVIGATION": {
+		"Wat is Aikido?": "/wat-is-aikido.html",
+		"Onze dojo": "/onze-dojo.html",
+		"Media": "/media.html",
+		"Praktische info": "/praktische-info.html",
+		"Links": "/links.html"
+	},
+	"NEWS": [
+		{
+			"title": "25 jaar Go Ryu dojo Ban Sen Juku Gent",
+			"text": "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur.",
+			"image": "assets/news_01.jpg",
+			"href": "/nieuws/25-jaar-go-ryu-dojo-ban-sen-juku-gent.html"
+		},
+		{
+			"title": "Instappen is mogelijk op ieder moment",
+			"text": "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur.",
+			"image": "assets/news_02.jpg",
+			"href": "/nieuws/instappen-is-mogelijk-op-ieder-moment.html"
+		},
+		{
+			"title": "Seizoensstart 2020-2021 op dinsdag 14 augustus",
+			"text": "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur.",
+			"image": "",
+			"href": "/nieuws/seizoensstart-2020-2021-op-dinsdag-14-augustus.html"
+		},
+		{
+			"title": "Ban Sen Juku viert 30ste verjaardag",
+			"text": "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur.",
+			"image": "assets/news_03.jpg",
+			"href": "/nieuws/ban-sen-juku-viert-30ste-verjaardag.html"
+		}
+	]
+}
