@@ -1,0 +1,24 @@
+include ../components/mixins/all
+
+block config
+  - pageKey = 'home'
+
+doctype html
+html(lang='en')
+  head
+    include head
+  body(class=pageKey)
+    .wrapper
+      include header
+      .page-content
+        a.logo.desktop(href='/', target='_self')
+          include logo
+        .intro
+          +info()
+          if bannerImage !== ''
+            +banner(CONFIG[pageKey].banner)
+        .main-content
+          block mainContent
+      include footer
+    .hamburger
+    include scripts

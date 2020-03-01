@@ -1,11 +1,12 @@
 header
-  .logo.mobile
+  a.logo.mobile(href='/', target='_self')
     include logo
   nav
     ul
-      each val, key in NAVIGATION
-        li
-          if active === key
-            span.active #{key}
-          else
-            a(href=val, title=key, target='_self')= key
+      each val, key in CONFIG
+        if val.includeInNav
+          li
+            if pageKey === key
+              span.active= val.title
+            else
+              a(href=val.path, title=val.title, target='_self')= val.title

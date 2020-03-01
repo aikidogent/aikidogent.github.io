@@ -1,10 +1,53 @@
 {
-	"NAVIGATION": {
-		"Wat is Aikido?": "/wat-is-aikido.html",
-		"Onze dojo": "/onze-dojo.html",
-		"Media": "/media.html",
-		"Praktische info": "/praktische-info.html",
-		"Links": "/links.html"
+	"CONFIG": {
+		"home": {
+			"title": "Home",
+			"path": "/",
+			"banner": "assets/hp-banner.jpg",
+			"includeInNav": false
+		},
+		"wat-is-aikido": {
+			"title": "Wat is Aikido?",
+			"path": "/wat-is-aikido.html",
+			"banner": "assets/image_01.jpg",
+			"includeInNav": true
+		},
+		"onze-dojo": {
+			"title": "Onze dojo",
+			"path": "/onze-dojo.html",
+			"banner": "assets/image_02.jpg",
+			"includeInNav": true
+		},
+		"media": {
+			"title": "Media",
+			"path": "/media.html",
+			"banner": "assets/image_01.jpg",
+			"includeInNav": true
+		},
+		"praktisch": {
+			"title": "Praktische informatie",
+			"path": "/praktische-informatie.html",
+			"banner": "assets/image_02.jpg",
+			"includeInNav": true
+		},
+		"links": {
+			"title": "Links",
+			"path": "/links.html",
+			"banner": "assets/image_01.jpg",
+			"includeInNav": true
+		},
+		"instappen": {
+			"title": "Instappen kan op elk moment",
+			"path": "/instappen-kan-op-elk-moment.html",
+			"banner": "assets/image_02.jpg",
+			"includeInNav": false
+		},
+		"waarom-aikido": {
+			"title": "Waarom Aikido?",
+			"path": "/waarom-aikido.html",
+			"banner": "assets/image_01.jpg",
+			"includeInNav": false
+		}
 	},
 	"NEWS": [
 		{
