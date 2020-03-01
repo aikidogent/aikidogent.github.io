@@ -7,7 +7,6 @@
   background-color: $white;
   box-shadow: $default-box-shadow;
   padding: 1rem 3rem 0 3rem;
-  z-index: 998;
   margin: 65vw auto 0 auto;
 
   @media screen and (min-width: $sm) {
@@ -20,6 +19,7 @@
   @media (min-width: $md) {
     top: $desktop-logo-height - $desktop-header-height - 1rem;
     box-shadow: $default-box-shadow;
+    z-index: 998;
   }
 
   section {
