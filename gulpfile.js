@@ -35,6 +35,7 @@ const path = require('path');
 const merge = require('gulp-merge-json');
 const data = require('gulp-data');
 const fs = require('fs');
+const ghPages = require('gulp-gh-pages');
 
 // Configure paths
 const paths = {
@@ -60,6 +61,7 @@ const paths = {
     src: themePath + 'src/assets/**/*.*',
     dest: themePath + 'dist/assets',
   },
+  deploy: themePath + 'dist/**/*',
 };
 
 
@@ -229,12 +231,22 @@ const serve = (done) => {
 };
 
 
+// Deploy dist folder to github pages
+const deploy = (done) => {
+  src(paths.deploy)
+    .pipe(ghPages())
+    .on('end', done)
+};
+
+
 // Commands
 const buildCommand = series(icons, parallel(series(buildSass, lintsass), pugData, buildPug, scripts, assets));
 const watchCommand = series(buildCommand, parallel(serve, watchFiles));
 const sasslintCommand = series(lintsass);
+const deployCommand = series(buildCommand, deploy);
 
 exports.build = buildCommand;
 exports.watch = watchCommand;
 exports.sasslint = sasslintCommand;
+exports.deploy = deployCommand;
 exports.default = buildCommand;
