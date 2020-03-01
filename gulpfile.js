@@ -44,6 +44,7 @@ const paths = {
     watchSrc: themePath + 'src/**/*.pug',
     dest: themePath + 'dist/',
     data: themePath + 'src/data/**/*.json',
+    dataDest: themePath + 'dist',
   },
   icons: {
     src:  themePath + 'src/icons/*.svg',
@@ -66,8 +67,8 @@ const paths = {
 
 
 // buildPug task
-const buildPug = (done) => {
-  gulp
+const buildPug = () => {
+  return gulp
     .src(paths.pug.compileSrc)
     .pipe(plumber())
     .pipe(data(() => {
@@ -80,14 +81,13 @@ const buildPug = (done) => {
     .pipe(cached('pug'))
     .pipe(gulp.dest(paths.pug.dest))
     .pipe(connect.reload());
-
-  done();
 };
 
 
 // Pug data
-const pugData = (done) => {
-  gulp.src(paths.pug.data)
+const pugData = () => {
+  return gulp
+    .src(paths.pug.data)
     .pipe(merge({
       fileName: 'data.json',
       edit: (json, file) => {
@@ -102,14 +102,13 @@ const pugData = (done) => {
         return data;
       }
     }))
-    .pipe(gulp.dest(paths.pug.dest))
-    .on('end', done);
+    .pipe(gulp.dest(paths.pug.dataDest))
 };
 
 
 // Iconfont task
-const icons = (done) => {
-  gulp
+const icons = () => {
+  return gulp
     .src([paths.icons.src,], {base: themePath})
     .pipe(iconfontCss({
       fontName: 'icons',
@@ -127,14 +126,12 @@ const icons = (done) => {
     .pipe(replace('{{icon-font-token}}', randomToken(8)))
     .pipe(gulp.dest(paths.icons.dest))
     .pipe(connect.reload());
-
-  done();
 };
 
 
 // Sass lint
-const lintsass = (done) => {
-  gulp
+const lintsass = () => {
+  return gulp
     .src(paths.styles.src)
     .pipe(gulpStylelint({
       failAfterError: false,
@@ -143,23 +140,19 @@ const lintsass = (done) => {
       ]
     }))
     .pipe(connect.reload());
-
-  done()
 };
 
 
 // Sass compile + prefix task
-const buildSass = (done) => {
-  gulp
+const buildSass = () => {
+  return gulp
     .src(paths.styles.src)
     .pipe(plumber())
     .pipe(_dev ? sourcemaps.init() : noop())
     .pipe(sass({
       outputStyle: sassStyle
     }).on('error', sass.logError))
-    // Add pixel fallback for rem values.
     .pipe(pixrem('1rem', {atrules: true}))
-    // Prefix CSS depending in required browser support.
     .pipe(autoprefixer({
       overrideBrowserslist: autoprefixerBrowsers,
       cascade: false
@@ -167,14 +160,12 @@ const buildSass = (done) => {
     .pipe(_dev ? sourcemaps.write('./') : noop())
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(connect.reload());
-
-  done();
 };
 
 
 // Javascript minify task
-const scripts = (done) => {
-  gulp
+const scripts = () => {
+  return gulp
     .src(paths.scripts.src)
     .pipe(plumber())
     .pipe(uglify())
@@ -183,19 +174,15 @@ const scripts = (done) => {
     }))
     .pipe(gulp.dest(paths.scripts.dest))
     .pipe(connect.reload());
-
-  done();
 };
 
 
 // Assets copy task
-const assets = (done) => {
-  gulp
+const assets = () => {
+  return gulp
     .src(paths.assets.src)
     .pipe(gulp.dest(paths.assets.dest))
     .pipe(connect.reload());
-
-  done();
 };
 
 
@@ -232,10 +219,12 @@ const serve = (done) => {
 
 
 // Deploy dist folder to github pages
-const deploy = (done) => {
-  src(paths.deploy)
-    .pipe(ghPages())
-    .on('end', done)
+const deploy = () => {
+  return gulp
+    .src(paths.deploy)
+    .pipe(ghPages({
+      branch: 'master'
+    }))
 };
 
 
