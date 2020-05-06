@@ -31,7 +31,9 @@ body {
   @media (min-width: $md) {
     position: relative;
     top: $desktop-header-height;
+    height: 100%;
     padding-left: 6rem;
+    margin-bottom: 6rem;
   }
 
   .intro {

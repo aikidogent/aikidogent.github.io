@@ -1,12 +1,20 @@
 include ../icons/chevron-right
 
-mixin news-teaser(href, image, title, text)
+mixin news-teaser-content(image, title, text)
   - const hasImage = image !== ''
+  if hasImage
+    .image(style='background-image: url(' + image + ')')
+  .content
+    h3= title
+    p= text
+  +chevron-right()
+
+mixin news-teaser(href, image, title, text)
+  - const hasHref = href !== ''
   li.news-teaser
-    a(href=href)
-      if hasImage
-        .image(style='background-image: url(' + image + ')')
-      .content
-        h3= title
-        p= text
-      +chevron-right()
+    if hasHref
+      a(href=href)
+        +news-teaser-content(image, title, text)
+    else
+      .news-teaser-content
+        +news-teaser-content(image, title, text)

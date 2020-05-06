@@ -47,7 +47,9 @@ body {
   .page-content {
     position: relative;
     top: 6rem;
+    height: 100%;
     padding-left: 6rem;
+    margin-bottom: 6rem;
   }
 }
 
@@ -434,11 +436,10 @@ nav ul li span.active {
 
 .news ul {
   list-style: none;
-  margin: 0;
+  margin: 0 0 0 -32px;
+  margin: 0 0 0 -2rem;
   padding: 0;
   width: calc(100% + 4rem);
-  margin-left: -32px;
-  margin-left: -2rem;
 }
 
 @media (min-width: 640px) {
@@ -452,7 +453,8 @@ nav ul li span.active {
   border-bottom: 1px solid #f2f2f2;
 }
 
-.news a {
+.news li.news-teaser a,
+.news li.news-teaser .news-teaser-content {
   position: relative;
   display: block;
   padding: 48px 80px 48px 48px;
@@ -460,17 +462,18 @@ nav ul li span.active {
   background: #ffffff;
 }
 
-.news a:hover {
-  background: #f8f8f8;
-}
-
 @media (max-width: 640px) {
-  .news a {
+  .news li.news-teaser a,
+  .news li.news-teaser .news-teaser-content {
     padding-left: 2rem;
   }
 }
 
-.news .image {
+.news li.news-teaser a:hover {
+  background: #f8f8f8;
+}
+
+.news li.news-teaser .image {
   position: absolute;
   top: 0;
   left: 0;
@@ -482,45 +485,45 @@ nav ul li span.active {
 }
 
 @media (min-width: 640px) {
-  .news .image {
+  .news li.news-teaser .image {
     width: 19rem;
   }
 }
 
-.news .image + .content {
+.news li.news-teaser .image + .content {
   padding-left: 144px;
   padding-left: 9rem;
 }
 
 @media (min-width: 640px) {
-  .news .image + .content {
+  .news li.news-teaser .image + .content {
     padding-left: 19rem;
   }
 }
 
-.news h3 {
+.news li.news-teaser h3 {
   margin-bottom: 0;
 }
 
 @media (max-width: 640px) {
-  .news h3 {
+  .news li.news-teaser h3 {
     font-size: 1.4rem;
     font-weight: 300;
   }
 }
 
-.news p {
+.news li.news-teaser p {
   margin-top: 16px;
   margin-top: 1rem;
 }
 
 @media (max-width: 640px) {
-  .news p {
+  .news li.news-teaser p {
     display: none !important;
   }
 }
 
-.news .chevron-right {
+.news li.news-teaser a .chevron-right {
   position: absolute;
   top: 50%;
   right: 32px;
@@ -531,6 +534,10 @@ nav ul li span.active {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+.news li.news-teaser .news-teaser-content .chevron-right {
+  display: none;
 }
 
 .teaser {
