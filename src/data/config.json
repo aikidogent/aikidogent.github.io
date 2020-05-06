@@ -8,7 +8,7 @@
   "wat-is-aikido": {
     "title": "Wat is Aikido?",
     "path": "/wat-is-aikido.html",
-    "banner": "assets/image_01.jpg",
+    "banner": "assets/aikido.jpg",
     "includeInNav": true
   },
   "onze-dojo": {
@@ -21,7 +21,7 @@
     "title": "Media",
     "path": "/media.html",
     "banner": "assets/image_01.jpg",
-    "includeInNav": true
+    "includeInNav": false
   },
   "praktisch": {
     "title": "Praktische informatie",
@@ -45,6 +45,12 @@
     "title": "Waarom Aikido?",
     "path": "/waarom-aikido.html",
     "banner": "assets/image_01.jpg",
+    "includeInNav": false
+  },
+  "corona": {
+    "title": "Update COVID-19",
+    "path": "/corona.html",
+    "banner": "assets/corona.jpg",
     "includeInNav": false
   }
 }

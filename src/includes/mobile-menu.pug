@@ -1,0 +1,15 @@
+.mobile-menu-backdrop
+.mobile-menu
+  ul
+    li
+      if pageKey === 'home'
+        span.active= 'Home'
+      else
+        a(href='/', title='Aikido Gent homepage', target='_self')= 'Home'
+    each val, key in CONFIG
+      if val.includeInNav
+        li
+          if pageKey === key
+            span.active= val.title
+          else
+            a(href=val.path, title=val.title, target='_self')= val.title

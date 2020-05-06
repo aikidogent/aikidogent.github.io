@@ -22,12 +22,41 @@ h2 {
   color: $black;
   font-size: 2rem;
   font-weight: 500;
+
+  &.page-title {
+    padding: 3rem;
+    font-size: 2rem;
+    margin-bottom: 0;
+
+    @media (min-width: $sm) {
+      position: absolute;
+      padding: 2rem 3rem;
+      top: -9.1rem;
+      left: -2rem;
+      font-size: 1.8rem;
+      background: $white;
+      border-left: 1rem solid $primary;
+      border-bottom: none;
+    }
+
+    @media (min-width: $md) {
+      top: -7.2rem;
+      left: 27rem;
+      background: $white;
+      border-left: none;
+      border-bottom: 1.1rem solid $primary;
+    }
+  }
 }
 
 h3 {
   color: $black;
   font-size: 1.6rem;
   font-weight: 500;
+
+  * + & {
+    margin-top: 3rem;
+  }
 }
 
 h4 {
@@ -43,5 +72,23 @@ p {
   font-size: 1.4rem;
   font-weight: 300;
   line-height: 2.4rem;
-  margin: 0;
+  margin: 0 0 2rem 0;
+}
+
+ul {
+  list-style: disc;
+  padding: 0 0 0 2rem;
+
+  li {
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+}
+
+a {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 2.4rem;
+  color: $primary;
 }

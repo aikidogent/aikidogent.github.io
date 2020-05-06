@@ -1,4 +1,17 @@
 body.home {
+  h2.page-title {
+    display: none;
+  }
+
+  .main-content {
+    margin-top: 0;
+    background: none;
+
+    .content {
+      padding: 0;
+    }
+  }
+
   .hp-teasers {
     @media screen and (min-width: $sm) {
       display: flex;

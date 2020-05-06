@@ -1,0 +1,41 @@
+.hamburger {
+  position: absolute;
+  top: 50%;
+  right: 3rem;
+  transform: translateY(-50%);
+
+  &.open {
+    .open { display: block; }
+    .closed { display: none; }
+  }
+
+  &.closed {
+    .open { display: none; }
+    .closed { display: block; }
+  }
+
+  .icon {
+    color: $white;
+
+    svg {
+      width: 2.2rem;
+      height: 2.2rem;
+      display: block;
+    }
+  }
+
+  .label {
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    font-weight: 500;
+    color: $white;
+    opacity: .5;
+  }
+
+  @media (min-width: $md) {
+    display: none;
+  }
+}

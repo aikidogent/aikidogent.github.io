@@ -1,26 +1,15 @@
 [
   {
-    "title": "25 jaar Go Ryu dojo Ban Sen Juku Gent",
-    "text": "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur.",
-    "image": "assets/news_01.jpg",
-    "href": ""
+    "title": "COVID-19",
+    "text": "Naar aanleiding van de maatregelen in het kader van de bestrijding van het Coronavirus, zijn wij genoodzaakt alle lessen op te schorten tot nader order.",
+    "image": "assets/corona.jpg",
+    "href": "/corona.html"
   },
   {
-    "title": "Instappen is mogelijk op ieder moment",
-    "text": "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur.",
-    "image": "assets/news_02.jpg",
-    "href": ""
-  },
-  {
-    "title": "Seizoensstart 2020-2021 op dinsdag 14 augustus",
-    "text": "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur.",
-    "image": "",
-    "href": ""
-  },
-  {
-    "title": "Ban Sen Juku viert 30ste verjaardag",
-    "text": "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur.",
-    "image": "assets/news_03.jpg",
-    "href": ""
+    "title": "Tomita Seiji Sensei, 8th Dan, on the essence of Aikido",
+    "text": "De vorige afleveringen gemist? Je vindt ze op de YouTube playlist van Ban Sen Juku",
+    "image": "assets/tomita_essence_video.jpg",
+    "href": "https://www.youtube.com/playlist?list=PLrTnh3v7X3Ur3OfWhQhAsnoD0thXiIojg&fbclid=IwAR2QoDdwgj0Lrr30quWtYxs8_VXNSUoXQwAHvsakxZH7oy2McOJ1SvshOQY",
+    "target": "_blank"
   }
 ]

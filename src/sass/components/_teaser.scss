@@ -29,7 +29,11 @@
     overflow: hidden;
   }
 
-  .content { padding: 3rem 0; }
+  .content {
+    padding: 3rem 0;
+
+    h3 { margin-top: 3rem; }
+  }
 
   .more-link {
     position: absolute;

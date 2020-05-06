@@ -9,11 +9,12 @@ mixin news-teaser-content(image, title, text)
     p= text
   +chevron-right()
 
-mixin news-teaser(href, image, title, text)
+mixin news-teaser(href, image, title, text, link_target)
   - const hasHref = href !== ''
+  - const target = link_target ? link_target : '_self'
   li.news-teaser
     if hasHref
-      a(href=href)
+      a(href=href, target=target)
         +news-teaser-content(image, title, text)
     else
       .news-teaser-content

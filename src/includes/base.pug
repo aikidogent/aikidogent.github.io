@@ -14,11 +14,14 @@ html(lang='en')
         a.logo.desktop(href='/', target='_self')
           include logo
         .intro
-          +info()
           if bannerImage !== ''
             +banner(CONFIG[pageKey].banner)
+          +info()
         .main-content
-          block mainContent
+          h2.page-title #{CONFIG[pageKey].title}
+          .content
+            block mainContent
+          include footer
       include footer
-    .hamburger
+      include mobile-menu
     include scripts

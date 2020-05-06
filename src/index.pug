@@ -5,15 +5,17 @@ block config
 
 block mainContent
   .hp-teasers
+    +teaser(CONFIG['corona'].title, '../assets/corona.jpg', CONFIG['corona'].path)
+      p Naar aanleiding van de maatregelen in het kader van de bestrijding van het Coronavirus, zijn wij genoodzaakt alle lessen op te schorten tot nader order.
+
     +teaser(CONFIG['instappen'].title, '../assets/image_01.jpg', CONFIG['instappen'].path)
-      p
-        | Heb je zin om te proeven van een authentieke Japanse krijgskunst? De beste manier om Aikido te ontdekken, is mee op de mat stappen. Nieuwkomers zijn op ieder moment in het seizoen van harte welkom.
-    +teaser(CONFIG['waarom-aikido'].title, '../assets/image_02.jpg', CONFIG['waarom-aikido'].path)
-      p
-        | Waarom doen we aikido? Op deze vraag is er geen eenduidig antwoord. Aikido is rijk genoeg opdat iedereen er verschillende dingen kan uithalen die voor hem of haar belangrijk zijn.
+      p Heb je zin om te proeven van een authentieke Japanse krijgskunst? De beste manier om Aikido te ontdekken, is mee op de mat stappen. Nieuwkomers zijn op ieder moment in het seizoen van harte welkom.
+
+    //+teaser(CONFIG['waarom-aikido'].title, '../assets/image_02.jpg', CONFIG['waarom-aikido'].path)
+      p Waarom doen we aikido? Op deze vraag is er geen eenduidig antwoord. Aikido is rijk genoeg opdat iedereen er verschillende dingen kan uithalen die voor hem of haar belangrijk zijn.
   .news
     h2 Nieuws
     ul
       each val, key in NEWS
-        +news-teaser(NEWS[key].href, NEWS[key].image, NEWS[key].title, NEWS[key].text)
+        +news-teaser(NEWS[key].href, NEWS[key].image, NEWS[key].title, NEWS[key].text, NEWS[key].target)
 

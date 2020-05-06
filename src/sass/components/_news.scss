@@ -14,6 +14,7 @@
 
   li.news-teaser {
     border-bottom: $default-border;
+    margin-bottom: 0;
 
     a,
     .news-teaser-content {
@@ -46,6 +47,7 @@
     }
 
     h3 {
+      margin-top: 0;
       margin-bottom: 0;
 
       @media (max-width: $sm) {
@@ -56,6 +58,7 @@
 
     p {
       margin-top: 1rem;
+      margin-bottom: 0;
 
       @media (max-width: $sm) {
         display: none !important;

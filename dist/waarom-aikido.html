@@ -56,14 +56,28 @@
             </li>
             <li><a href="/onze-dojo.html" title="Onze dojo" target="_self">Onze dojo</a>
             </li>
-            <li><a href="/media.html" title="Media" target="_self">Media</a>
-            </li>
             <li><a href="/praktische-informatie.html" title="Praktische informatie" target="_self">Praktische informatie</a>
             </li>
             <li><a href="/links.html" title="Links" target="_self">Links</a>
             </li>
           </ul>
-        </nav>
+        </nav><a class="hamburger closed" href="#" onclick="javascript:openMobileMenu(event)">
+          <div class="open">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 22 22">
+                <path d="M13.9 11.1l3.9-3.9c.1-.1.1-.1.1-.2s0-.2-.1-.2l-2.6-2.6c-.1-.1-.1-.1-.2-.1s-.2 0-.2.1l-4 3.8L7 4.2c-.1-.1-.2-.1-.2-.1-.1 0-.2 0-.2.1L3.9 6.8c-.1.1-.1.3 0 .4l3.9 3.9L3.9 15c-.1.1-.1.3 0 .4L6.5 18c.1.1.1.1.2.1s.2 0 .2-.1l3.9-3.9 3.9 3.9c.1.1.1.1.2.1s.1 0 .2-.1l2.6-2.6c.1-.1.1-.3 0-.4l-3.8-3.9z" style="fill:#FFF"></path>
+              </svg>
+            </div>
+            <div class="label">SLUIT</div>
+          </div>
+          <div class="closed">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 22 22">
+                <path d="M19.8 3.6v3c0 .3-.2.5-.5.5h-17c-.3 0-.5-.3-.5-.5v-3c0-.3.2-.5.5-.5h17c.3 0 .5.2.5.5zm-.5 5.5h-17c-.3 0-.5.2-.5.5v3c0 .3.2.5.5.5h17c.3 0 .5-.2.5-.5v-3c0-.3-.2-.5-.5-.5zm0 6h-17c-.3 0-.5.2-.5.5v3c0 .3.2.5.5.5h17c.3 0 .5-.2.5-.5v-3c0-.3-.2-.5-.5-.5z" style="fill:#FFF"></path>
+              </svg>
+            </div>
+            <div class="label">MENU</div>
+          </div></a>
       </header>
       <div class="page-content"><a class="logo desktop" href="/" target="_self">
           <div class="horizontal">
@@ -107,6 +121,7 @@
             </svg>
           </div></a>
         <div class="intro">
+          <div class="banner" style="background-image: url(assets/image_01.jpg)"><img src="assets/image_01.jpg"/></div>
           <div class="info">
             <section>
               <h1>Aikido in Gent</h1>
@@ -129,27 +144,48 @@
               <table class="contact">
                 <tr>
                   <td>Telefoon</td>
-                  <td>0486 13 91 71 (Dries)</td>
+                  <td><a class="tel" href="tel:+32486139171">0486 13 91 71 (Dries)</a></td>
                 </tr>
                 <tr>
                   <td>E-mail</td>
                   <td><a class="mailto" href="mailto:info@aikidogent.be">info@aikidogent.be</a></td>
                 </tr>
               </table>
-            </section><a class="more-link" href="#">Praktische informatie</a>
+            </section><a class="more-link" href="/praktische-informatie.html">Praktische informatie</a>
           </div>
-          <div class="banner" style="background-image: url(assets/image_01.jpg)"><img src="assets/image_01.jpg"/></div>
         </div>
         <div class="main-content">
+          <h2 class="page-title">Waarom Aikido?</h2>
+          <div class="content">
+            <p>Waarom doen we aikido? Op deze vraag is er geen eenduidig antwoord. Aikido is rijk genoeg opdat iedereen er verschillende dingen kan uithalen die voor hem of haar belangrijk zijn. Daarom vroegen we aan enkele van onze leden wat hun motivatie is om telkens weer op de tatami te staan.</p>
+          </div>
+          <footer>
+            <p>&copy; 2020 - Ban Sen Juku Go Ryu</p>
+          </footer>
         </div>
       </div>
       <footer>
         <p>&copy; 2020 - Ban Sen Juku Go Ryu</p>
       </footer>
+      <div class="mobile-menu-backdrop"></div>
+      <div class="mobile-menu">
+        <ul>
+          <li><a href="/" title="Aikido Gent homepage" target="_self">Home</a>
+          </li>
+          <li><a href="/wat-is-aikido.html" title="Wat is Aikido?" target="_self">Wat is Aikido?</a>
+          </li>
+          <li><a href="/onze-dojo.html" title="Onze dojo" target="_self">Onze dojo</a>
+          </li>
+          <li><a href="/praktische-informatie.html" title="Praktische informatie" target="_self">Praktische informatie</a>
+          </li>
+          <li><a href="/links.html" title="Links" target="_self">Links</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="hamburger"></div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/clamp.min.js"></script>
+    <script src="js/mobile-menu.min.js"></script>
     <script>
       $ = jQuery;
       $paragraphs = $('.news-teaser p');

@@ -10,7 +10,8 @@
   margin: 65vw auto 0 auto;
   z-index: 996;
 
-  @media screen and (min-width: $sm) {
+  @media (min-width: $sm) {
+    float: right;
     margin: 0;
     width: 30rem;
     max-width: none;
@@ -18,6 +19,7 @@
   }
 
   @media (min-width: $md) {
+    float: none;
     top: $desktop-logo-height - $desktop-header-height - 1rem;
     box-shadow: $default-box-shadow;
     z-index: 998;
@@ -45,9 +47,10 @@
 
     &.contact td:last-child { font-weight: 300; }
 
+    a.tel,
     a.mailto {
       color: $black;
-      text-decoration: underline;
+      &:hover { text-decoration: underline; }
     }
   }
 
@@ -59,5 +62,13 @@
     font-size: 1.4rem;
     padding: 2rem 0;
     margin: 0 -3rem;
+  }
+}
+
+body:not(.home) {
+  .info {
+    @media (max-width: $sm) {
+      display: none;
+    }
   }
 }
