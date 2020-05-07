@@ -30,6 +30,8 @@
     "gulp-stylelint": "^9.0.0",
     "gulp-uglify": "^3.0.2",
     "lodash": "^4.17.11",
+    "lodash.template": "^4.5.0",
+    "minimist": "^1.2.5",
     "random-token": "0.0.8",
     "stylelint": "^10.1.0",
     "stylelint-config-standard": "^18.3.0",
