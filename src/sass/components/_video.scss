@@ -7,5 +7,9 @@
       width: calc(50% - 1rem);
       height: calc((50vw - 11rem) * .5625);
     }
+    @media (min-width: $md) {
+      width: 40rem;
+      height: 22.5rem;
+    }
   }
 }

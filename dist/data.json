@@ -1,66 +1,76 @@
 {
 	"CONFIG": {
 		"home": {
-			"title": "Home",
+			"title": "Homepage",
 			"path": "/",
 			"image": "/assets/hp-banner.jpg",
-			"includeInNav": false
-		},
-		"instappen": {
-			"title": "Instappen kan op elk moment",
-			"path": "/instappen-kan-op-elk-moment.html",
-			"image": "/assets/image_02.jpg",
-			"includeInNav": false
-		},
-		"links": {
-			"title": "Links",
-			"path": "/links.html",
-			"image": "/assets/image_01.jpg",
-			"includeInNav": true
-		},
-		"media": {
-			"title": "Media",
-			"path": "/media.html",
-			"image": "/assets/image_01.jpg",
-			"includeInNav": false
-		},
-		"onze-dojo": {
-			"title": "Onze dojo",
-			"path": "/onze-dojo.html",
-			"image": "/assets/image_02.jpg",
-			"includeInNav": true
-		},
-		"praktisch": {
-			"title": "Praktische informatie",
-			"path": "/praktische-informatie.html",
-			"image": "/assets/image_02.jpg",
-			"includeInNav": true
-		},
-		"waarom-aikido": {
-			"title": "Waarom Aikido?",
-			"path": "/waarom-aikido.html",
-			"image": "/assets/image_01.jpg",
+			"metaDescription": "Homepage van Aikido Gent - Ban Sen Juku in Wondelgem (sporthal Neptunus)",
 			"includeInNav": false
 		},
 		"wat-is-aikido": {
 			"title": "Wat is Aikido?",
 			"path": "/wat-is-aikido.html",
 			"image": "/assets/aikido.jpg",
+			"metaDescription": "Wat is Aikido? Historiek en beschrijving van de traditionele Japanse krijgskunst gesticht door O-Sensei Morihei Ueshiba",
 			"includeInNav": true
+		},
+		"onze-dojo": {
+			"title": "Onze dojo",
+			"path": "/onze-dojo.html",
+			"image": "/assets/image_02.jpg",
+			"metaDescription": "Onze dojo in sporthal Neptunus te Wondelgem is de Gentse tak van Ban Sen Juku, de school van Tomita Seiji Sensei",
+			"includeInNav": true
+		},
+		"waarom-aikido": {
+			"title": "Waarom Aikido?",
+			"path": "/waarom-aikido.html",
+			"image": "/assets/image_01.jpg",
+			"metaDescription": "Waarom aikido behoefenen? Onze leden geven een antwoord op deze veelzijdige vraag.",
+			"includeInNav": false
+		},
+		"praktisch": {
+			"title": "Praktische informatie",
+			"path": "/praktische-informatie.html",
+			"image": "/assets/image_02.jpg",
+			"metaDescription": "Alle praktische informatie over trainen bij onze dojo. Bereikbaarheid, lidgeld, lestijden...",
+			"includeInNav": true
+		},
+		"media": {
+			"title": "Media",
+			"path": "/media.html",
+			"image": "/assets/image_01.jpg",
+			"metaDescription": "Galerij van foto's en video's over onze Aikido dojo in sporthal Neptunus te Wondelgem",
+			"includeInNav": false
+		},
+		"links": {
+			"title": "Links",
+			"path": "/links.html",
+			"image": "/assets/image_01.jpg",
+			"metaDescription": "Links naar onze sociale media (Facebook) en de website van de Ban Sen Juku school van Tomita Sensei.",
+			"includeInNav": true
+		},
+		"instappen": {
+			"title": "Instappen kan op elk moment",
+			"path": "/instappen-kan-op-elk-moment.html",
+			"image": "/assets/image_02.jpg",
+			"metaDescription": "Instappen kan elk moment van het jaar bij Aikido Gent - Ban Sen Juku in Wondelgem (sporthal Neptunus)",
+			"includeInNav": false
 		}
 	},
 	"NEWS": {
 		"corona": {
-			"title": "COVID-19",
+			"title": "Update COVID-19",
 			"path": "/nieuws/corona.html",
 			"image": "/assets/corona.jpg",
-			"text": "Naar aanleiding van de maatregelen in het kader van de bestrijding van het Coronavirus, zijn wij genoodzaakt alle lessen op te schorten tot nader order."
+			"text": "Naar aanleiding van de maatregelen in het kader van de bestrijding van het Coronavirus, zijn wij genoodzaakt alle lessen op te schorten tot nader order.",
+			"metaDescription": "Update COVID-19"
 		},
 		"tomita-essence-videos": {
-			"title": "Tomita Seiji Sensei, 8th Dan, on the essence of Aikido",
-			"path": "/nieuws/tomita-sensei-essence-of-aikido.html",
-			"image": "/assets/tomita_essence_video.jpg",
-			"text": "De vorige afleveringen gemist? Je vindt ze op de YouTube playlist van Ban Sen Juku"
+			"title": "Tomita Sensei over de essentie van Aikido",
+			"path": "/nieuws/tomita-sensei-essentie-van-aikido.html",
+			"image": "/assets/tomita_essentie_aikido.jpg",
+			"text": "Tomita Sensei heeft een in een reeks video's over de essentie van Aikido.",
+			"metaDescription": "Tomita Sensei over de essentie van Aikido - Video playlist"
 		}
 	}
 }
