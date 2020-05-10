@@ -919,6 +919,18 @@ nav ul li span.active {
   border-top: 1px solid #f2f2f2;
 }
 
+.video-playlist iframe {
+  width: 100%;
+  height: calc((100vw - 10rem) * .5625);
+}
+
+@media (min-width: 640px) {
+  .video-playlist iframe {
+    width: calc(50% - 1rem);
+    height: calc((50vw - 11rem) * .5625);
+  }
+}
+
 body.home h2.page-title {
   display: none;
 }
