@@ -10,7 +10,10 @@ script.
 
 meta(charset='UTF-8')
 meta(name='viewport' content='width=device-width, initial-scale=1.0')
-title #{CONFIG[pageKey].title} - Aikido Gent - Ban Sen Juku
+if pageType === 'news'
+  title #{NEWS[pageKey].title} - Aikido Gent - Ban Sen Juku
+else
+  title #{CONFIG[pageKey].title} - Aikido Gent - Ban Sen Juku
 link(href='https://fonts.googleapis.com/css?family=Roboto:300,300i,500,700&display=swap', rel='stylesheet')
 link(href='../css/main.css', rel='stylesheet')
 
