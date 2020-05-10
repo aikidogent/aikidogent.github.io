@@ -223,7 +223,8 @@ const deploy = () => {
   return gulp
     .src(paths.deploy)
     .pipe(ghPages({
-      branch: 'master'
+      branch: 'master',
+      cname: 'aikidogent.be'
     }))
 };
 
