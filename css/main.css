@@ -931,6 +931,13 @@ nav ul li span.active {
   }
 }
 
+@media (min-width: 960px) {
+  .video-playlist iframe {
+    width: 40rem;
+    height: 22.5rem;
+  }
+}
+
 body.home h2.page-title {
   display: none;
 }
