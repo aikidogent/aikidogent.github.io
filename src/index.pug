@@ -17,5 +17,5 @@ block mainContent
     h2 Nieuws
     ul
       each val, key in NEWS
-        +news-teaser(NEWS[key].href, NEWS[key].image, NEWS[key].title, NEWS[key].text, NEWS[key].target)
+        +news-teaser(NEWS[key].path, NEWS[key].image, NEWS[key].title, NEWS[key].text, NEWS[key].target)
 

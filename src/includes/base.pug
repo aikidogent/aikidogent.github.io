@@ -14,11 +14,16 @@ html(lang='en')
         a.logo.desktop(href='/', target='_self')
           include logo
         .intro
-          if bannerImage !== ''
-            +banner(CONFIG[pageKey].banner)
+          if pageType === 'news'
+            +banner(NEWS[pageKey].image)
+          else
+            +banner(CONFIG[pageKey].image)
           +info()
         .main-content
-          h2.page-title #{CONFIG[pageKey].title}
+          if pageType === 'news'
+            h2.page-title #{NEWS[pageKey].title}
+          else
+            h2.page-title #{CONFIG[pageKey].title}
           .content
             block mainContent
           include footer

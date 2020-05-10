@@ -229,7 +229,7 @@ const deploy = () => {
 
 
 // Commands
-const buildCommand = series(icons, parallel(series(buildSass, lintsass), pugData, buildPug, scripts, assets));
+const buildCommand = series(pugData, icons, parallel(series(buildSass, lintsass), buildPug, scripts, assets));
 const watchCommand = series(buildCommand, parallel(serve, watchFiles));
 const sasslintCommand = series(lintsass);
 const deployCommand = series(buildCommand, deploy);
