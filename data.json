@@ -1,7 +1,7 @@
 {
 	"CONFIG": {
 		"home": {
-			"title": "Home",
+			"title": "Homepage",
 			"path": "/",
 			"image": "/assets/hp-banner.jpg",
 			"includeInNav": false
@@ -51,16 +51,16 @@
 	},
 	"NEWS": {
 		"corona": {
-			"title": "COVID-19",
+			"title": "Update COVID-19",
 			"path": "/nieuws/corona.html",
 			"image": "/assets/corona.jpg",
 			"text": "Naar aanleiding van de maatregelen in het kader van de bestrijding van het Coronavirus, zijn wij genoodzaakt alle lessen op te schorten tot nader order."
 		},
 		"tomita-essence-videos": {
-			"title": "Tomita Seiji Sensei, 8th Dan, on the essence of Aikido",
-			"path": "/nieuws/tomita-sensei-essence-of-aikido.html",
-			"image": "/assets/tomita_essence_video.jpg",
-			"text": "De vorige afleveringen gemist? Je vindt ze op de YouTube playlist van Ban Sen Juku"
+			"title": "Tomita Sensei over de essentie van Aikido",
+			"path": "/nieuws/tomita-sensei-essentie-van-aikido.html",
+			"image": "/assets/tomita_essentie_aikido.jpg",
+			"text": "Tomita Sensei heeft een in een reeks video's over de essentie van Aikido."
 		}
 	}
 }
