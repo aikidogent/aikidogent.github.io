@@ -36,6 +36,7 @@ const merge = require('gulp-merge-json');
 const data = require('gulp-data');
 const fs = require('fs');
 const ghPages = require('gulp-gh-pages');
+const file = require('gulp-file');
 
 // Configure paths
 const paths = {
@@ -62,7 +63,10 @@ const paths = {
     src: themePath + 'src/assets/**/*.*',
     dest: themePath + 'dist/assets',
   },
-  deploy: themePath + 'dist/**/*',
+  deploy: {
+    path: themePath + 'dist/**/*',
+    cname: 'aikidogent.be',
+  },
 };
 
 
@@ -221,10 +225,10 @@ const serve = (done) => {
 // Deploy dist folder to github pages
 const deploy = () => {
   return gulp
-    .src(paths.deploy)
+    .src(paths.deploy.path)
+    .pipe(file('CNAME', paths.deploy.cname))
     .pipe(ghPages({
-      branch: 'master',
-      cname: 'aikidogent.be'
+      branch: 'master'
     }))
 };
 
@@ -239,4 +243,4 @@ exports.build = buildCommand;
 exports.watch = watchCommand;
 exports.sasslint = sasslintCommand;
 exports.deploy = deployCommand;
-exports.default = buildCommand;
+exports.default = watchCommand;
