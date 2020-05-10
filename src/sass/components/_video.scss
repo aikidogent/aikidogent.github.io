@@ -1,0 +1,11 @@
+.video-playlist {
+  iframe {
+    width: 100%;
+    height: calc((100vw - 10rem) * .5625);
+
+    @media (min-width: $sm) {
+      width: calc(50% - 1rem);
+      height: calc((50vw - 11rem) * .5625);
+    }
+  }
+}
