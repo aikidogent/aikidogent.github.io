@@ -58,6 +58,13 @@
 		}
 	},
 	"NEWS": {
+		"temple-sur-lot-2020-cancelled": {
+			"title": "Jaarlijkse stage in Zuid-Frankrijk afgelast wegens Corona",
+			"path": "/nieuws/temple-sur-lot-2020-afgelast.html",
+			"image": "/assets/temple-sur-lot.jpg",
+			"text": "Door de Corona-crisis, kan onze jaarlijkse stage in Temple-sur-Lot dit jaar niet door gaan.",
+			"metaDescription": "Jaarlijkse aikido-stage in Zuid-Frankrijk afgelast wegens Corona-crisis"
+		},
 		"corona": {
 			"title": "Update COVID-19",
 			"path": "/nieuws/corona.html",
@@ -66,7 +73,7 @@
 			"metaDescription": "Update COVID-19"
 		},
 		"tomita-essence-videos": {
-			"title": "Tomita Seiji Sensei over de essentie van Aikido",
+			"title": "Tomita Sensei over de essentie van Aikido",
 			"path": "/nieuws/tomita-sensei-essentie-van-aikido.html",
 			"image": "/assets/tomita_essentie_aikido.jpg",
 			"text": "Tomita Sensei heeft een in een reeks video's over de essentie van Aikido.",
