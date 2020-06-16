@@ -787,6 +787,7 @@ nav ul li span.active {
   height: 100%;
   width: 144px;
   width: 9rem;
+  background-color: #ff4040;
   background-size: cover;
   background-position: center center;
 }
