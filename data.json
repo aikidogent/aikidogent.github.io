@@ -58,6 +58,13 @@
 		}
 	},
 	"NEWS": {
+		"corona-heropstart": {
+			"title": "Heropstart van de lessen",
+			"path": "/nieuws/heropstart-van-de-lessen.html",
+			"image": "/assets/corona_heropstart.jpg",
+			"text": "Onze lessen zijn terug opgestart. Zowel dinsdag als donderdag wordt er opnieuw getraind.",
+			"metaDescription": "Na de Corona-crisis, wordt er zowel dinsdag als donderdag opnieuw Aikido getraind."
+		},
 		"temple-sur-lot-2020-cancelled": {
 			"title": "Jaarlijkse stage in Zuid-Frankrijk afgelast wegens Corona",
 			"path": "/nieuws/temple-sur-lot-2020-afgelast.html",
