@@ -3,12 +3,17 @@ extends ../includes/base
 block config
   - pageType = 'news'
   - pageKey = 'tomita-essence-videos'
-  - embedLinks = ['-OEyBtNRXMk', 'ODUzoUnP52g', 'On-1lyy3u4A', 'RKwKYe9MeUc', 'Dppwzuvjyak', 'ibM7zPp5lGc', 'L-xiGtGUC3Q', '9OojL_4sSYY', '7byfCRvzlWI', 'DDtS2Wqe49w', 'bFeDloOWsoo', 'm3Aj-oIrBSE']
 
 block mainContent
   p
-    | Tomita Sensei heeft een in een reeks video's over de essentie van Aikido. Een belangrijke bron van informatie die de basisprincipes van onze school samenvat. Je kan ze hieronder bekijken.
+    | Tomita Sensei heeft een in een reeks video's over de essentie van Aikido. Een belangrijke bron van informatie die de basisprincipes van onze school samenvat. Je kan ze bekijken op het YouTube-kanaal van onze school.
 
   .video-playlist
-    each val in embedLinks
-      iframe(src=`https://www.youtube-nocookie.com/embed/${val}` frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+    each val, index in VIDEOS
+      div
+        a(
+          href=`https://www.youtube.com/watch?v=${VIDEOS[index].key}&ab_channel=BanSenJukuAikido`
+          target='_blank'
+          )
+          .image(style=`background-image: url(/assets/videos/essence_${index + 1}.webp)`)
+          .title #{index + 1} - #{VIDEOS[index].title}

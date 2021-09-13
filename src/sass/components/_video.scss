@@ -1,4 +1,53 @@
 .video-playlist {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+
+  @media (max-width: $sm) {
+    display: block;
+  }
+
+  a {
+    position: relative;
+    display: block;
+    font-size: 1.4rem;
+    text-align: center;
+    width: 24.8rem;
+    height: 18rem;
+    margin-right: 1rem;
+    background: #FFF;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .05);
+    margin-bottom: 1.6rem;
+    padding-top: 13.8rem;
+    border: .1rem solid #FFF;
+
+    &:hover {
+      box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .15);
+      border: .1rem solid $primary;
+    }
+
+    @media (max-width: $sm) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-size: cover;
+      width: 24.6rem;
+      height: 13.8rem;
+    }
+
+    .title {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #000;
+      line-height: 4.2rem;
+    }
+  }
+
   iframe {
     width: 100%;
     height: calc((100vw - 10rem) * .5625);
