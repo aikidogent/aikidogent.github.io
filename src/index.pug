@@ -5,13 +5,13 @@ block config
 
 block mainContent
   .hp-teasers
-    +teaser(NEWS['corona'].title, '../assets/corona.jpg', NEWS['corona'].path)
-      p Geleidelijk aan worden de trainingen terug opgestart. Dinsdag 9 juni gaan we terug van start, zij het aangepast aan de veiligheid.
+    //+teaser(NEWS['corona'].title, '../assets/corona.jpg', NEWS['corona'].path)
+      p De trainingen zijn opnieuw gestart. Elke dinsdag en donderdag wordt er opnieuw getraind.
 
     +teaser(CONFIG['instappen'].title, '../assets/image_01.jpg', CONFIG['instappen'].path)
       p Heb je zin om te proeven van een authentieke Japanse krijgskunst? De beste manier om Aikido te ontdekken, is mee op de mat stappen. Nieuwkomers zijn op ieder moment in het seizoen van harte welkom.
 
-    //+teaser(CONFIG['waarom-aikido'].title, '../assets/image_02.jpg', CONFIG['waarom-aikido'].path)
+    +teaser(CONFIG['waarom-aikido'].title, '../assets/image_02.jpg', CONFIG['waarom-aikido'].path)
       p Waarom doen we aikido? Op deze vraag is er geen eenduidig antwoord. Aikido is rijk genoeg opdat iedereen er verschillende dingen kan uithalen die voor hem of haar belangrijk zijn.
   .news
     h2 Nieuws
