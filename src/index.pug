@@ -11,8 +11,12 @@ block mainContent
     +teaser(CONFIG['instappen'].title, '../assets/image_01.jpg', CONFIG['instappen'].path)
       p Heb je zin om te proeven van een authentieke Japanse krijgskunst? De beste manier om Aikido te ontdekken, is mee op de mat stappen. Nieuwkomers zijn op ieder moment in het seizoen van harte welkom.
 
-    +teaser(CONFIG['waarom-aikido'].title, '../assets/image_02.jpg', CONFIG['waarom-aikido'].path)
+    //+teaser(CONFIG['waarom-aikido'].title, '../assets/image_02.jpg', CONFIG['waarom-aikido'].path)
       p Waarom doen we aikido? Op deze vraag is er geen eenduidig antwoord. Aikido is rijk genoeg opdat iedereen er verschillende dingen kan uithalen die voor hem of haar belangrijk zijn.
+        |
+    +teaser(NEWS['maand-van-de-sportclub-2021'].title, NEWS['maand-van-de-sportclub-2021'].image, NEWS['maand-van-de-sportclub-2021'].path)
+      p #{NEWS['maand-van-de-sportclub-2021'].text}
+
   .news
     h2 Nieuws
     ul
