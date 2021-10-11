@@ -58,6 +58,13 @@
 		}
 	},
 	"NEWS": {
+		"zeestage-2021-terugblik": {
+			"title": "Zeestage 2021: Een terugblik",
+			"path": "/nieuws/zeestage-2021-terugblik.html",
+			"image": "/assets/seaside-2021.jpg",
+			"text": "Op zaterdag 2 oktober kwamen we naar aloude gewoonte samen aan de kust voor een dag boordevol Aikido.",
+			"metaDescription": "Aikido stage aan zee op 2 oktober 2021 was een succes."
+		},
 		"zeestage-2021": {
 			"title": "Zeestage: 2 oktober 2021",
 			"path": "/nieuws/zeestage-2021.html",

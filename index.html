@@ -176,31 +176,35 @@
         <div class="main-content">
           <h2 class="page-title">Homepage</h2>
           <div class="content">
-            <div class="hp-teasers">
-              <!--+teaser(NEWS['corona'].title, '../assets/corona.jpg', NEWS['corona'].path)
-              p De trainingen zijn opnieuw gestart. Elke dinsdag en donderdag wordt er opnieuw getraind.
-              
-              --><a class="teaser" href="/instappen-kan-op-elk-moment.html">
+            <div class="hp-teasers"><a class="teaser" href="/instappen-kan-op-elk-moment.html">
                 <div class="image" style="background-image: url(../assets/image_01.jpg)"></div>
                 <div class="content">
                   <h3>Instappen kan op elk moment</h3>
                   <p>Heb je zin om te proeven van een authentieke Japanse krijgskunst? De beste manier om Aikido te ontdekken, is mee op de mat stappen. Nieuwkomers zijn op ieder moment in het seizoen van harte welkom.</p>
                 </div>
-                <div class="more-link">Lees meer</div></a>
-              <!--+teaser(CONFIG['waarom-aikido'].title, '../assets/image_02.jpg', CONFIG['waarom-aikido'].path)
-              p Waarom doen we aikido? Op deze vraag is er geen eenduidig antwoord. Aikido is rijk genoeg opdat iedereen er verschillende dingen kan uithalen die voor hem of haar belangrijk zijn.
-                |
-              --><a class="teaser" href="/nieuws/maand-van-de-sportclub-2021.html">
-                <div class="image" style="background-image: url(/assets/maand-van-de-sportclub-2021.jpg)"></div>
+                <div class="more-link">Lees meer</div></a><a class="teaser" href="/nieuws/tomita-sensei-essentie-van-aikido.html">
+                <div class="image" style="background-image: url(/assets/tomita_essentie_aikido.jpg)"></div>
                 <div class="content">
-                  <h3>Maand van de sportclub</h3>
-                  <p>Gedurende de maand september kan je in kader van 'Maand van de Sportclub' ook bij ons gratis aikido initiatielessn komen volgen. Geen reden meer om te twijfelen eens mee op de mat te stappen!</p>
+                  <h3>Tomita Sensei over de essentie van Aikido</h3>
+                  <p>Tomita Sensei heeft het in een reeks video's over de essentie van Aikido.</p>
                 </div>
                 <div class="more-link">Lees meer</div></a>
             </div>
             <div class="news">
               <h2>Nieuws</h2>
               <ul>
+                <li class="news-teaser"><a href="/nieuws/zeestage-2021-terugblik.html" target="_self">
+                    <div class="image" style="background-image: url(/assets/seaside-2021.jpg)"></div>
+                    <div class="content">
+                      <h3>Zeestage 2021: Een terugblik</h3>
+                      <p>Op zaterdag 2 oktober kwamen we naar aloude gewoonte samen aan de kust voor een dag boordevol Aikido.</p>
+                    </div>
+                    <div class="chevron-right">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16">
+                        <path d="M13.5 8l-9 8-2-2.3L8.9 8 2.5 2.3l2-2.3z"></path>
+                      </svg>
+                    </div></a>
+                </li>
                 <li class="news-teaser"><a href="/nieuws/zeestage-2021.html" target="_self">
                     <div class="image" style="background-image: url(/assets/great-wave.jpeg)"></div>
                     <div class="content">
@@ -313,8 +317,9 @@
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="js/clamp.min.js"></script>
-    <script src="js/mobile-menu.min.js"></script>
+    <script src="/js/clamp.min.js"></script>
+    <script src="/js/mobile-menu.min.js"></script>
+    <script src="/js/fslightbox.min.js"></script>
     <script>
       $ = jQuery;
       $paragraphs = $('.news-teaser p');
