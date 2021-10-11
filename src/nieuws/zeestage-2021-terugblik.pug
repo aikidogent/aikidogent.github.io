@@ -1,0 +1,20 @@
+extends ../includes/base
+
+block config
+    - pageType = 'news'
+    - pageKey = 'zeestage-2021-terugblik'
+
+mixin gallery(...items)
+    div.gallery
+        each item in items
+            a.gallery-item(
+                data-fslightbox='gallery',
+                href=`/assets/gallery/zeestage-2021/zeestage-2021-${item}.jpg`,
+                style=`background-image: url(/assets/gallery/zeestage-2021/zeestage-2021-${item}-thumb.jpg)`
+            )
+
+block mainContent
+    p Op zaterdag 2 oktober kwamen we naar aloude gewoonte samen aan de kust voor een dag boordevol Aikido. Het werd een interessante dag, waarop Tomita Sensei dieper in ging op het principe van éénwording. Hij bracht specifieke oefeningen en hielp ons zo vat te krijgen op één van de meest essentiële principes van Aikido.
+    p We sloten de dag af met een gezellig etentje in het centrum van Veurne.
+
+    +gallery(0,1,2,3,4,5,6)

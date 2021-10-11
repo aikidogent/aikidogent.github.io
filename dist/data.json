@@ -58,6 +58,13 @@
 		}
 	},
 	"NEWS": {
+		"zeestage-2021-terugblik": {
+			"title": "Zeestage 2021: Een terugblik",
+			"path": "/nieuws/zeestage-2021-terugblik.html",
+			"image": "/assets/seaside-2021.jpg",
+			"text": "Op zaterdag 2 oktober kwamen we naar aloude gewoonte samen aan de kust voor een dag boordevol Aikido.",
+			"metaDescription": "Aikido stage aan zee op 2 oktober 2021 was een succes."
+		},
 		"zeestage-2021": {
 			"title": "Zeestage: 2 oktober 2021",
 			"path": "/nieuws/zeestage-2021.html",
@@ -104,7 +111,7 @@
 			"title": "Tomita Sensei over de essentie van Aikido",
 			"path": "/nieuws/tomita-sensei-essentie-van-aikido.html",
 			"image": "/assets/tomita_essentie_aikido.jpg",
-			"text": "Tomita Sensei heeft een in een reeks video's over de essentie van Aikido.",
+			"text": "Tomita Sensei heeft het in een reeks video's over de essentie van Aikido.",
 			"metaDescription": "Tomita Sensei over de essentie van Aikido - Video playlist"
 		}
 	},
