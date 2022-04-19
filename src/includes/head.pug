@@ -27,6 +27,6 @@ meta(name='msapplication-config' content='/assets/favicon/browserconfig.xml')
 meta(name='theme-color' content='#ffffff')
 
 if pageType === 'news'
-  meta(description=`${NEWS[pageKey].metaDescription}`)
+  meta(name='description' content=`${NEWS[pageKey].metaDescription}`)
 else
-  meta(description=`${CONFIG[pageKey].metaDescription}`)
+  meta(name='description' content=`${CONFIG[pageKey].metaDescription}`)
