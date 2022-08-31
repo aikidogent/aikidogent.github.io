@@ -1,0 +1,29 @@
+extends ../includes/base
+
+block config
+    - pageType = 'news'
+    - pageKey = '25-jaar-goryu'
+
+mixin gallery(...items)
+    div.gallery
+        each item in items
+            a.gallery-item(
+                data-fslightbox='gallery',
+                href=`/assets/gallery/25-jaar-goryu/25-jaar-goryu-${item}.jpg`,
+                style=`background-image: url(/assets/gallery/25-jaar-goryu/25-jaar-goryu-${item}-thumb.jpg)`
+            )
+
+block mainContent
+    h3 Go Ryu, de Gentse dojo van de internationale aikidoschool Ban Sen Juku, viert dit jaar zijn 25-jarig bestaan.
+    p In 1993 richtten #[strong Tomita Seiji Shihan], Joost De Wulf en Henk Coudenys een Gentse tak van de internationale aikidoschool Ban Sen Juku(BSJ) op.
+    p Vanaf 1999 nam #[strong Erwin Sevens] de Gentse dojo over. Erwin startte eind 1986 in een Gentse aikidoclub van de Vlaamse Aikido Vereniging. In deze club leerde hij Tomita Sensei kennen. De kans om les te krijgen van een Japans aikidogrootmeester kon hij niet laten liggen en samen met Henk Coudenys begon hij regelmatig lessen te volgen in de Antwerpse dojo van Tomita Sensei.
+    p In 1994 stapte hij definitief over naar BSJ. Tomita Sensei kwam in de beginjaren vaak lesgeven in de Gentse BSJ-dojo. In 1999 nam Erwin het initiatief - om met goedkeuring van Tomita Sensei - de dojo om te vormen tot een zelfstandige dojo, geaffilieerd met Ban Sen Juku.
+    p De dojo kreeg de naam #[strong ‘Go Ryu’], wat staat voor ‘samenvloeiing’. Hiermee werd verwezen naar de ligging van de club: aan de samenvloeiing van Leie en Schelde. Maar ook de basisgedachte van aikido zit hierin: de samenvloeiing van krachten, harmonie.
+    p In september 2012 nam #[strong Dries Cappon] de leiding over. In oktober 2013 verhuisde de club naar sporthal Neptunus in Wondelgem, waar we nu twee keer per week trainen. Op dinsdag van 20.00 tot 22.00 uur, op donderdag van 21.00 tot 22.30 uur. In september, de maand van de Gentse sportclub, is iedereen welkom voor proeflessen.
+
+    h3 Stage en jubileum
+    p Om dit jubileum op gepaste wijze te vieren, vindt op zondag 18 september 2022 een stage o.l.v. Shihan Tomita Seiji plaats. Het jubileum moest eerder gevierd worden, door Covid waren we nu pas zeker van ideale omstandigheden.
+
+    h3 Enkele foto's uit de oude doos
+
+    +gallery(0,1,2,3,4)
