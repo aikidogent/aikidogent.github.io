@@ -4,15 +4,6 @@ block config
     - pageType = 'news'
     - pageKey = '25-jaar-goryu'
 
-mixin gallery(...items)
-    div.gallery
-        each item in items
-            a.gallery-item(
-                data-fslightbox='gallery',
-                href=`/assets/gallery/25-jaar-goryu/25-jaar-goryu-${item}.jpg`,
-                style=`background-image: url(/assets/gallery/25-jaar-goryu/25-jaar-goryu-${item}-thumb.jpg)`
-            )
-
 block mainContent
     h3 Go Ryu, de Gentse dojo van de internationale aikidoschool Ban Sen Juku, viert dit jaar zijn 25-jarig bestaan.
     p In 1993 richtten #[strong Tomita Seiji Shihan], Joost De Wulf en Henk Coudenys een Gentse tak van de internationale aikidoschool Ban Sen Juku(BSJ) op.
@@ -26,4 +17,4 @@ block mainContent
 
     h3 Enkele foto's uit de oude doos
 
-    +gallery(0,1,2,3,4)
+    +gallery('25-jaar-goryu',5)

@@ -1,0 +1,10 @@
+mixin gallery(name, count)
+  - var n = 0;
+
+  div.gallery
+      while n < count
+        a.gallery-item(
+          data-fslightbox='gallery',
+          href=`/assets/gallery/${name}/${name}-${n}.jpg`,
+          style=`background-image: url(/assets/gallery/${name}/${name}-${n++}-thumb.jpg)`
+        )

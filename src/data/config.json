@@ -3,56 +3,90 @@
     "title": "Homepage",
     "path": "/",
     "image": "/assets/hp-banner.jpg",
-    "metaDescription": "Aikido Gent - Ban Sen Juku in Wondelgem (sporthal Neptunus). Training op dinsdag van 20u tot 22u en donderdag van 21u tot 22u30.",
+    "meta": {
+      "keywords": "aikido, ban sen juku, bansenjuku, go ryu, tomita, budo, dojo, krijgskunst, gevechtsport, gent, wondelgem, belgië, japan, dinsdag, donderdag, tieners, volwassenen",
+      "description": "Aikido Gent - Ban Sen Juku in Wondelgem (sporthal Neptunus). Training op dinsdag van 20u tot 22u en donderdag van 21u tot 22u30."
+    },
     "includeInNav": false
   },
   "wat-is-aikido": {
     "title": "Wat is Aikido?",
     "path": "/wat-is-aikido.html",
     "image": "/assets/aikido.jpg",
-    "metaDescription": "Wat is Aikido? Historiek en beschrijving van de traditionele Japanse krijgskunst gesticht door O-Sensei Morihei Ueshiba",
+    "meta": {
+      "keywords": "aikido, ban sen juku, bansenjuku, tomita, budo, dojo, krijgskunst, gevechtsport, japan, o-sensei, o sensei, morihei, ueshiba, historiek",
+      "description": "Wat is Aikido? Historiek en beschrijving van de traditionele Japanse krijgskunst gesticht door O-Sensei Morihei Ueshiba."
+    },
     "includeInNav": true
   },
   "onze-dojo": {
     "title": "Onze dojo",
     "path": "/onze-dojo.html",
     "image": "/assets/image_02.jpg",
-    "metaDescription": "Onze dojo in sporthal Neptunus te Wondelgem is de Gentse tak van Ban Sen Juku, de school van Tomita Seiji Sensei",
+    "meta": {
+      "keywords": "aikido, ban sen juku, bansenjuku, go ryu, tomita, budo, dojo, krijgskunst, gevechtsport, gent, wondelgem, dinsdag, donderdag, tieners, volwassenen",
+      "description": "Onze dojo in sporthal Neptunus te Wondelgem is de Gentse tak van Ban Sen Juku, de school van Tomita Seiji Sensei."
+    },
     "includeInNav": true
   },
   "waarom-aikido": {
     "title": "Waarom Aikido?",
     "path": "/waarom-aikido.html",
     "image": "/assets/image_01.jpg",
-    "metaDescription": "Waarom aikido behoefenen? Onze leden geven een antwoord op deze veelzijdige vraag.",
+    "meta": {
+      "keywords": "aikido, ban sen juku, bansenjuku, go ryu, tomita, budo, dojo, krijgskunst, gevechtsport, waarom, dinsdag, donderdag, tieners, volwassenen",
+      "description": "Waarom aikido beoefenen? Onze leden geven een antwoord op deze veelzijdige vraag."
+    },
     "includeInNav": false
   },
   "praktisch": {
     "title": "Praktische informatie",
     "path": "/praktische-informatie.html",
     "image": "/assets/image_02.jpg",
-    "metaDescription": "Alle praktische informatie over trainen bij onze dojo. Bereikbaarheid, lidgeld, lestijden...",
+    "meta": {
+      "keywords": "aikido, ban sen juku, bansenjuku, go ryu, tomita, budo, dojo, krijgskunst, gevechtsport, praktisch, dinsdag, donderdag, tieners, volwassenen, lidgeld",
+      "description": "Alle praktische informatie over Aikido trainen bij onze dojo. Bereikbaarheid, lidgeld, lestijden..."
+    },
     "includeInNav": true
   },
   "media": {
     "title": "Media",
     "path": "/media.html",
     "image": "/assets/image_01.jpg",
-    "metaDescription": "Galerij van foto's en video's over onze Aikido dojo in sporthal Neptunus te Wondelgem",
+    "meta": {
+      "keywords": "aikido, ban sen juku, bansenjuku, go ryu, tomita, budo, dojo, krijgskunst, gevechtsport, praktisch, dinsdag, donderdag, tieners, volwassenen, foto, video, galerij",
+      "description": "Galerij van foto's en video's over onze Aikido dojo in sporthal Neptunus te Wondelgem, Gent."
+    },
     "includeInNav": false
   },
   "links": {
     "title": "Links",
     "path": "/links.html",
     "image": "/assets/image_01.jpg",
-    "metaDescription": "Links naar onze sociale media (Facebook) en de website van de Ban Sen Juku school van Tomita Sensei.",
+    "meta": {
+      "keywords": "aikido, ban sen juku, bansenjuku, go ryu, tomita, budo, dojo, krijgskunst, gevechtsport, praktisch, dinsdag, donderdag, tieners, volwassenen, links",
+      "description": "Links naar onze sociale media (Facebook) en de website van de Ban Sen Juku school van Tomita Sensei."
+    },
     "includeInNav": true
   },
   "instappen": {
     "title": "Instappen kan op elk moment",
     "path": "/instappen-kan-op-elk-moment.html",
     "image": "/assets/image_02.jpg",
-    "metaDescription": "Instappen kan elk moment van het jaar bij Aikido Gent - Ban Sen Juku in Wondelgem (sporthal Neptunus)",
+    "meta": {
+      "keywords": "aikido, ban sen juku, bansenjuku, go ryu, tomita, budo, dojo, krijgskunst, gevechtsport, praktisch, dinsdag, donderdag, tieners, volwassenen, instappen",
+      "description": "Instappen kan elk moment van het jaar bij Aikido Gent - Ban Sen Juku in Wondelgem (sporthal Neptunus)"
+    },
+    "includeInNav": false
+  },
+  "tomita-essence-videos": {
+    "title": "Tomita Sensei over de essentie van Aikido",
+    "path": "/nieuws/tomita-sensei-essentie-van-aikido.html",
+    "image": "/assets/tomita_essentie_aikido.jpg",
+    "meta": {
+      "keywords": "aikido, ban sen juku, bansenjuku, go ryu, tomita, budo, dojo, krijgskunst, gevechtsport, praktisch, dinsdag, donderdag, tieners, volwassenen, nieuws, kennisdeling",
+      "description": "Tomita Sensei over de essentie van Aikido - Video playlist."
+    },
     "includeInNav": false
   }
 }
