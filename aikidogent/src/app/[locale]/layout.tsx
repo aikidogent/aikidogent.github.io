@@ -55,7 +55,9 @@ const RootLayout: FC<Props> = async ({ children, params: { locale } }) => {
                   <Logo type="desktop" />
                   {children}
                 </div>
-                <footer>&copy; 2024 - Ban Sen Juku Go Ryu</footer>
+                <footer>
+                  <p>&copy; 2024 - Ban Sen Juku Go Ryu</p>
+                </footer>
                 <MobileMenu />
               </div>
             </Shell>
