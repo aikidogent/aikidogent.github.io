@@ -115,6 +115,10 @@ body {
   }
 }
 
+.main-content > .content img {
+  width: auto;
+}
+
 footer {
   display: none;
   padding-bottom: 5rem;
@@ -178,20 +182,13 @@ p {
   margin-top: 0;
 }
 
-h1 {
+h1, h2 {
   color: #000000;
   font-size: 2rem;
   font-weight: 500;
 }
 
-h2 {
-  color: #ff4040;
-  font-size: 2rem;
-  font-weight: 500;
-  margin-bottom: .75rem;
-}
-
-.info h1 {
+.info h1, .info h2 {
   color: #ff4040;
   font-size: 2rem;
   font-weight: 500;

@@ -14,6 +14,9 @@ const nlMessages = {
   links: {
     title: 'Links',
   },
+  news: {
+    title: 'Nieuws',
+  },
   common: {
     hamburger: {
       close: 'Sluit',

@@ -43,7 +43,7 @@ export const MainLayout: FC<Props> = ({
     </div>
     <div className="main-content">
       {pageTitle ? <h1 className="page-title">{pageTitle}</h1> : null}
-      {children}
+      <div className="content">{children}</div>
     </div>
   </>
 );

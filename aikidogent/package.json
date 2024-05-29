@@ -3,11 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build-routes": "tsup src/features/translatable-routes/routes.ts --format cjs,esm --dts --minifyWhitespace --minifyIdentifiers --minifySyntax --clean --external react --external react-dom --external i18next",
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "dotenv -- next dev",
+    "build": "dotenv -- next build",
+    "start": "dotenv -- next start",
+    "lint": "dotenv -- next lint"
   },
   "type": "module",
   "dependencies": {

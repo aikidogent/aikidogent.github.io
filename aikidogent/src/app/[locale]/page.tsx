@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { SupportedLocale } from '@/features/i18n';
+import { NewsOverview } from '@/features/news';
 import { MainLayout } from '@/layouts';
 
 type Props = {
@@ -25,7 +26,7 @@ const Home: FC<Props> = ({ params: { locale } }) => {
       }}
       isHomepage
     >
-      main
+      <NewsOverview />
     </MainLayout>
   );
 };

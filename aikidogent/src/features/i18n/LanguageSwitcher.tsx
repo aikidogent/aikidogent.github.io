@@ -1,4 +1,5 @@
 import { FC, useTransition } from 'react';
+import { useParams } from 'next/navigation';
 import { useLocale } from 'next-intl';
 import { Link, usePathname, useRouter } from '@/navigation';
 
@@ -9,11 +10,13 @@ export const LanguageSwitcher: FC<Props> = ({}) => {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const pathname = usePathname();
+  const params = useParams();
 
   const toggleLocale = () => {
     startTransition(() => {
       router.replace(
-        { pathname },
+        // @ts-ignore
+        { pathname, params },
         { locale: currentLocale === 'nl' ? 'en' : 'nl' },
       );
     });

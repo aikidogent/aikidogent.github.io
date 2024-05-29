@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import createCache from '@emotion/cache';
 import { CacheProvider, css, Global } from '@emotion/react';
-import { usePageScroll } from '@/utils';
+import { usePageScroll } from '@/utils/context';
 
 type Props = {
   children?: React.ReactNode;

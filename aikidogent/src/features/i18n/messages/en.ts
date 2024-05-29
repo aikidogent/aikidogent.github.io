@@ -16,6 +16,9 @@ const enMessages: Messages = {
   links: {
     title: 'Links',
   },
+  news: {
+    title: 'News',
+  },
   common: {
     hamburger: {
       close: 'Close',

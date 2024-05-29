@@ -19,6 +19,10 @@ export const pathnames = {
     en: '/practical-information',
   },
   '/links': '/links',
+  '/news/[id]': {
+    nl: '/nieuws/[id]',
+    en: '/news/[id]',
+  },
 } satisfies Pathnames<typeof locales>;
 
 export const { Link, redirect, usePathname, useRouter, getPathname } =
