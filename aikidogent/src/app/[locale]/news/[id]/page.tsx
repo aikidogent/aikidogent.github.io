@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { SupportedLocale } from '@/features/i18n';
 import { NewsDetail } from '@/features/news/types';
 import { MainLayout } from '@/layouts';
 import { preProcessContent } from '@/utils';
@@ -6,11 +7,17 @@ import { preProcessContent } from '@/utils';
 type Props = {
   params: {
     id: string;
+    locale: SupportedLocale;
   };
 };
 
-const getNewsItem = async (id: string): Promise<NewsDetail> => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_ROUTE}/news/${id}`);
+const getNewsItem = async (
+  id: string,
+  locale: SupportedLocale,
+): Promise<NewsDetail> => {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_ROUTE}/news/${id}?language=${locale}`,
+  );
 
   console.log({ res });
 
@@ -21,8 +28,8 @@ const getNewsItem = async (id: string): Promise<NewsDetail> => {
   return res.json();
 };
 
-const Page: FC<Props> = async ({ params: { id } }) => {
-  const data = await getNewsItem(id);
+const Page: FC<Props> = async ({ params: { id, locale } }) => {
+  const data = await getNewsItem(id, locale);
 
   console.log({ content: data.content });
 

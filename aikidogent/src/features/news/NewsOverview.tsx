@@ -1,9 +1,12 @@
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
+import { SupportedLocale } from '@/features/i18n';
 import { Link } from '@/navigation';
 import { NewsList } from './types';
 
-const getNews = async (): Promise<NewsList> => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_ROUTE}/news`);
+const getNews = async (locale: SupportedLocale): Promise<NewsList> => {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_ROUTE}/news?language=${locale}`,
+  );
 
   if (!res.ok) {
     throw new Error('Failed to fetch data');
@@ -14,7 +17,8 @@ const getNews = async (): Promise<NewsList> => {
 
 export const NewsOverview = async () => {
   const t = await getTranslations('news');
-  const data = await getNews();
+  const locale = await getLocale();
+  const data = await getNews(locale as SupportedLocale);
 
   return (
     <div className="news">
