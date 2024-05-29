@@ -37,6 +37,7 @@ export const MainLayout: FC<Props> = ({ pageTitle, banner, children }) => (
     </div>
     <div className="main-content">
       {pageTitle ? <h1 className="page-title">{pageTitle}</h1> : null}
+      {children}
     </div>
   </>
 );

@@ -1,6 +1,6 @@
 const nlMessages = {
   homepage: {
-    title: 'homepage NL',
+    title: 'Homepage',
   },
   whatIsAikido: {
     title: 'Wat is Aikido?',
@@ -15,6 +15,10 @@ const nlMessages = {
     title: 'Links',
   },
   common: {
+    hamburger: {
+      close: 'Sluit',
+      menu: 'Menu',
+    },
     info: {
       title: 'Aikido in Gent',
       subtitle: 'Ontdek een authentieke Japanse krijgskunst',

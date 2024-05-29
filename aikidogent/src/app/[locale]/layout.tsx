@@ -6,6 +6,8 @@ import { locales, SupportedLocale } from '@/features/i18n';
 import { Shell } from '@/shell/Shell';
 import { Logo } from '@/ui/Logo';
 import '@/ui/main.css';
+import { MobileMenuContextProvider } from '@/context';
+import { MobileMenu } from '@/ui/MobileMenu';
 import { Navigation } from '@/ui/Navigation';
 
 export const metadata = {
@@ -42,18 +44,22 @@ const RootLayout: FC<Props> = async ({ children, params: { locale } }) => {
     <html lang={locale} className={roboto.className}>
       <body>
         <NextIntlClientProvider messages={messages}>
-          <Shell>
-            <div className="wrapper">
-              <header>
-                <Logo type="mobile" />
-                <Navigation />
-              </header>
-              <div className="page-content">
-                <Logo type="desktop" />
-                {children}
+          <MobileMenuContextProvider>
+            <Shell>
+              <div className="wrapper">
+                <header>
+                  <Logo type="mobile" />
+                  <Navigation />
+                </header>
+                <div className="page-content">
+                  <Logo type="desktop" />
+                  {children}
+                </div>
+                <footer>&copy; 2024 - Ban Sen Juku Go Ryu</footer>
+                <MobileMenu />
               </div>
-            </div>
-          </Shell>
+            </Shell>
+          </MobileMenuContextProvider>
         </NextIntlClientProvider>
       </body>
     </html>

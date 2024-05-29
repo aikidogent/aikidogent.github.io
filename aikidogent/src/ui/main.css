@@ -274,6 +274,10 @@ a {
   background-position: center center;
 }
 
+.banner img {
+  height: auto;
+}
+
 .banner:after {
   content: '';
   display: block;
@@ -348,22 +352,6 @@ body.component {
   transform: translateY(-50%);
 }
 
-.hamburger.open .open {
-  display: block;
-}
-
-.hamburger.open .closed {
-  display: none;
-}
-
-.hamburger.closed .open {
-  display: none;
-}
-
-.hamburger.closed .closed {
-  display: block;
-}
-
 .hamburger .icon {
   color: #ffffff;
 }
@@ -381,6 +369,7 @@ body.component {
   transform: translateX(-50%);
   font-size: 1rem;
   font-weight: 500;
+  text-transform: uppercase;
   color: #ffffff;
   opacity: .5;
 }

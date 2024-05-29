@@ -2,12 +2,12 @@ import { Messages } from '@/features/i18n/messages/nl';
 
 const enMessages: Messages = {
   homepage: {
-    title: 'homepage EN',
+    title: 'Homepage',
   },
   whatIsAikido: {
     title: 'What is Aikido?',
   },
-  practicalInformation: {
+  practicalInfo: {
     title: 'Practical information',
   },
   ourDojo: {
@@ -17,6 +17,10 @@ const enMessages: Messages = {
     title: 'Links',
   },
   common: {
+    hamburger: {
+      close: 'Close',
+      menu: 'Menu',
+    },
     info: {
       title: 'Aikido in Ghent',
       subtitle: 'Discover an authentic Japanese martial art',

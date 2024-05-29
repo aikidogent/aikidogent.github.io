@@ -1,18 +1,36 @@
 'use client';
 
-import React from 'react';
+import { FC } from 'react';
 import { useTranslations } from 'next-intl';
+import { useMobileMenu } from '@/context';
 import { Link, usePathname } from '@/navigation';
-import { Hamburger } from '@/ui/Hamburger';
 
-export const Navigation = () => {
+type Props = {};
+
+export const MobileMenu: FC<Props> = ({}) => {
   const t = useTranslations();
   const pathName = usePathname();
+  const { open, setOpen } = useMobileMenu();
 
   return (
     <>
-      <nav>
+      <div className={`mobile-menu-backdrop ${open ? 'open' : 'closed'}`} />
+      <div className={`mobile-menu ${open ? 'open' : 'closed'}`}>
         <ul>
+          <li>
+            {pathName === '/' ? (
+              <span className="active">{t('homepage.title')}</span>
+            ) : (
+              <Link
+                href="/"
+                title={t('homepage.title')}
+                target="_self"
+                onClick={() => setOpen(false)}
+              >
+                {t('homepage.title')}
+              </Link>
+            )}
+          </li>
           <li>
             {pathName === '/what-is-aikido' ? (
               <span className="active">{t('whatIsAikido.title')}</span>
@@ -21,6 +39,7 @@ export const Navigation = () => {
                 href="/what-is-aikido"
                 title={t('whatIsAikido.title')}
                 target="_self"
+                onClick={() => setOpen(false)}
               >
                 {t('whatIsAikido.title')}
               </Link>
@@ -30,7 +49,12 @@ export const Navigation = () => {
             {pathName === '/dojo' ? (
               <span className="active">{t('ourDojo.title')}</span>
             ) : (
-              <Link href="/dojo" title="Onze dojo" target="_self">
+              <Link
+                href="/dojo"
+                title="Onze dojo"
+                target="_self"
+                onClick={() => setOpen(false)}
+              >
                 {t('ourDojo.title')}
               </Link>
             )}
@@ -43,6 +67,7 @@ export const Navigation = () => {
                 href="/practical-information"
                 title={t('practicalInfo.title')}
                 target="_self"
+                onClick={() => setOpen(false)}
               >
                 {t('practicalInfo.title')}
               </Link>
@@ -52,14 +77,18 @@ export const Navigation = () => {
             {pathName === '/links' ? (
               <span className="active">{t('links.title')}</span>
             ) : (
-              <Link href="/links" title="Links" target="_self">
+              <Link
+                href="/links"
+                title="Links"
+                target="_self"
+                onClick={() => setOpen(false)}
+              >
                 {t('links.title')}
               </Link>
             )}
           </li>
         </ul>
-      </nav>
-      <Hamburger />
+      </div>
     </>
   );
 };
