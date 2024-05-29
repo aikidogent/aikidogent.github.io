@@ -23,8 +23,9 @@ const Home: FC<Props> = ({ params: { locale } }) => {
         height: 1187,
         alt: 'Go Ryu dojo',
       }}
+      isHomepage
     >
-      <main>{t('title')}</main>
+      main
     </MainLayout>
   );
 };

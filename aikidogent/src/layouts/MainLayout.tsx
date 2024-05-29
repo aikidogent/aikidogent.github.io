@@ -10,12 +10,18 @@ type Banner = {
 };
 
 type Props = {
+  isHomepage?: boolean;
   pageTitle?: string;
   banner?: Banner;
   children?: React.ReactNode;
 };
 
-export const MainLayout: FC<Props> = ({ pageTitle, banner, children }) => (
+export const MainLayout: FC<Props> = ({
+  isHomepage,
+  pageTitle,
+  banner,
+  children,
+}) => (
   <>
     <div className="intro">
       <div
@@ -33,7 +39,7 @@ export const MainLayout: FC<Props> = ({ pageTitle, banner, children }) => (
           height={banner ? banner.height : 1187}
         />
       </div>
-      <InfoSection />
+      <InfoSection isHomepage={isHomepage} />
     </div>
     <div className="main-content">
       {pageTitle ? <h1 className="page-title">{pageTitle}</h1> : null}

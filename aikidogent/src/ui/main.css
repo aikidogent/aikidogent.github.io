@@ -191,6 +191,13 @@ h2 {
   margin-bottom: .75rem;
 }
 
+.info h1 {
+  color: #ff4040;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: .75rem;
+}
+
 h1.page-title {
   padding: 3rem;
   font-size: 2rem;
@@ -858,10 +865,6 @@ nav ul li span.active {
     width: 40rem;
     height: 22.5rem;
   }
-}
-
-body.home h2.page-title {
-  display: none;
 }
 
 body.home .main-content {

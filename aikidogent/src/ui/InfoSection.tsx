@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
 
-export const InfoSection = () => {
+type Props = {
+  isHomepage?: boolean;
+};
+
+export const InfoSection: FC<Props> = ({ isHomepage = false }) => {
   const t = useTranslations('common.info');
 
   return (
     <div className="info">
       <section>
-        <h2>{t('title')}</h2>
+        {isHomepage ? <h1>{t('title')}</h1> : <h2>{t('title')}</h2>}
         <h4>{t('subtitle')}</h4>
       </section>
       <section>
