@@ -10,7 +10,7 @@ export const InfoSection: FC<Props> = ({ isHomepage = false }) => {
   const t = useTranslations('common.info');
 
   return (
-    <div className="info">
+    <div className={`info ${isHomepage ? 'home' : ''}`}>
       <section>
         {isHomepage ? <h1>{t('title')}</h1> : <h2>{t('title')}</h2>}
         <h4>{t('subtitle')}</h4>

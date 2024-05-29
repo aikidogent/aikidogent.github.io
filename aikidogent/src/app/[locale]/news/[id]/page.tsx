@@ -19,8 +19,6 @@ const getNewsItem = async (
     `${process.env.NEXT_PUBLIC_API_ROUTE}/news/${id}?language=${locale}`,
   );
 
-  console.log({ res });
-
   if (!res.ok) {
     throw new Error('Failed to fetch data');
   }
@@ -30,8 +28,6 @@ const getNewsItem = async (
 
 const Page: FC<Props> = async ({ params: { id, locale } }) => {
   const data = await getNewsItem(id, locale);
-
-  console.log({ content: data.content });
 
   return (
     <MainLayout pageTitle={data.title}>

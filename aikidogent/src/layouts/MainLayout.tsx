@@ -41,9 +41,12 @@ export const MainLayout: FC<Props> = ({
       </div>
       <InfoSection isHomepage={isHomepage} />
     </div>
-    <div className="main-content">
+    <div className={`main-content ${isHomepage ? 'home' : ''}`}>
       {pageTitle ? <h1 className="page-title">{pageTitle}</h1> : null}
       <div className="content">{children}</div>
+      <footer>
+        <p>&copy; 2024 - Ban Sen Juku Go Ryu</p>
+      </footer>
     </div>
   </>
 );

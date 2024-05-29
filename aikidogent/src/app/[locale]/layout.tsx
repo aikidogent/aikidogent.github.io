@@ -45,22 +45,20 @@ const RootLayout: FC<Props> = async ({ children, params: { locale } }) => {
       <body>
         <NextIntlClientProvider messages={messages}>
           <MobileMenuContextProvider>
-            <Shell>
-              <div className="wrapper">
-                <header>
-                  <Logo type="mobile" />
-                  <Navigation />
-                </header>
-                <div className="page-content">
-                  <Logo type="desktop" />
-                  {children}
-                </div>
-                <footer>
-                  <p>&copy; 2024 - Ban Sen Juku Go Ryu</p>
-                </footer>
-                <MobileMenu />
+            <div className="wrapper">
+              <header>
+                <Logo type="mobile" />
+                <Navigation />
+              </header>
+              <div className="page-content">
+                <Logo type="desktop" />
+                {children}
               </div>
-            </Shell>
+              <footer>
+                <p>&copy; 2024 - Ban Sen Juku Go Ryu</p>
+              </footer>
+              <MobileMenu />
+            </div>
           </MobileMenuContextProvider>
         </NextIntlClientProvider>
       </body>
