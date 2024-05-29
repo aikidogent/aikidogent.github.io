@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useTranslations } from 'next-intl';
+import { LanguageSwitcher } from '@/features/i18n/LanguageSwitcher';
 import { Link, usePathname } from '@/navigation';
 import { Hamburger } from '@/ui/Hamburger';
 
@@ -56,6 +57,12 @@ export const Navigation = () => {
                 {t('links.title')}
               </Link>
             )}
+          </li>
+          <li>
+            <span className="divider" />
+          </li>
+          <li>
+            <LanguageSwitcher />
           </li>
         </ul>
       </nav>
