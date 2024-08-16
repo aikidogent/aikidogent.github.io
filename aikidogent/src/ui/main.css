@@ -537,6 +537,23 @@ body.component {
 
 .mobile-menu ul li {
   margin: 0;
+
+  & .language_switcher {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 1.3rem;
+    line-height: 2.4rem;
+    font-weight: 300;
+    color: #666;
+    cursor: pointer;
+    text-transform: none;
+    margin-top: 2rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .mobile-menu ul li a,
@@ -876,7 +893,7 @@ nav ul li span.divider {
   font-size: 1.3rem;
   line-height: 2.4rem;
   font-weight: 300;
-  color: #999;
+  color: #666;
   cursor: pointer;
 
   &:hover {

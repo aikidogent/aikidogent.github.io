@@ -1,8 +1,9 @@
 'use client';
 
-import { FC } from 'react';
+import React, { FC } from 'react';
 import { useTranslations } from 'next-intl';
 import { useMobileMenu } from '@/context';
+import { LanguageSwitcher } from '@/features/i18n/LanguageSwitcher';
 import { Link, usePathname } from '@/navigation';
 
 type Props = {};
@@ -86,6 +87,9 @@ export const MobileMenu: FC<Props> = ({}) => {
                 {t('links.title')}
               </Link>
             )}
+          </li>
+          <li>
+            <LanguageSwitcher />
           </li>
         </ul>
       </div>

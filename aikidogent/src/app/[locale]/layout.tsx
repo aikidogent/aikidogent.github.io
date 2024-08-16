@@ -3,7 +3,6 @@ import { Roboto } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
 import { locales, SupportedLocale } from '@/features/i18n';
-import { Shell } from '@/shell/Shell';
 import { Logo } from '@/ui/Logo';
 import '@/ui/main.css';
 import { MobileMenuContextProvider } from '@/context';
