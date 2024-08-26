@@ -92,6 +92,16 @@
 		}
 	},
 	"NEWS": {
+		"overlijden-frank": {
+			"title": "We nemen afscheid van Frank Vanhyfte",
+			"path": "/nieuws/overlijden-frank.html",
+			"image": "/assets/overlijden-frank.jpg",
+			"text": "Met spijt in het hart namen we zaterdag 24 augustus 2024 afscheid van onze goede vriend Frank Vanhyfte. Frank was al een 30-tal jaar actief in Aikido in Gent.",
+			"meta": {
+				"keywords": "aikido, ban sen juku, bansenjuku, go ryu, tomita, budo, dojo, krijgskunst, gevechtsport, praktisch, dinsdag, donderdag, tieners, volwassenen, nieuws, kennisdeling",
+				"description": "Met spijt in het hart namen we zaterdag 24 augustus 2024 afscheid van onze goede vriend Frank Vanhyfte."
+			}
+		},
 		"kennisdeling-gent": {
 			"title": "Gentse Aikido dojo's delen hun ervaring",
 			"path": "/nieuws/kennisdeling-gent.html",
@@ -99,7 +109,7 @@
 			"text": "We gaan opnieuw samen met 4 andere Gentse dojo's de mat op om onze ervaringen te delen. We zijn verheugd dit bijzondere samenwerkingsevenement opnieuw te organiseren.",
 			"meta": {
 				"keywords": "aikido, ban sen juku, bansenjuku, go ryu, tomita, budo, dojo, krijgskunst, gevechtsport, praktisch, dinsdag, donderdag, tieners, volwassenen, nieuws, kennisdeling",
-				"description": "Kennisdeling stage tussen 5 Gentse Aikido clubs op 17 september 2023 in Neptunus Wondelgem."
+				"description": "Kennisdeling stage tussen 5 Gentse Aikido clubs op 16 september 2023 in Neptunus Wondelgem."
 			}
 		},
 		"25-jaar-goryu": {
