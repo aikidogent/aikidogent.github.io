@@ -7,6 +7,7 @@ export type NewsTeaser = {
   created: string;
   modified: string;
   link: string;
+  image_id: string;
 };
 
 export type LinksItem = {

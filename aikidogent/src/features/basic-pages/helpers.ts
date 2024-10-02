@@ -2,7 +2,7 @@ import { SupportedLocale } from '@/features/i18n';
 import { NewsDetail } from '@/features/news/types';
 
 export const getBasicPage = async (
-  id: string,
+  id: number,
   locale: SupportedLocale,
 ): Promise<NewsDetail> => {
   const res = await fetch(

@@ -17,6 +17,11 @@ const nlMessages = {
   news: {
     title: 'Nieuws',
   },
+  essence: {
+    title: 'Tomita Sensei over de essentie van Aikido',
+    intro:
+      "Tomita Sensei heeft het in een reeks video's over de essentie van Aikido. Een belangrijke bron van informatie die de basisprincipes van onze school samenvat. Je kan ze bekijken op het YouTube-kanaal van onze school.",
+  },
   common: {
     hamburger: {
       close: 'Sluit',
@@ -32,6 +37,7 @@ const nlMessages = {
       email: 'E-mail',
       practicalInfo: 'Praktische informatie',
     },
+    readMore: 'Lees meer',
   },
 };
 

@@ -19,6 +19,11 @@ const enMessages: Messages = {
   news: {
     title: 'News',
   },
+  essence: {
+    title: 'Tomita Sensei on the essence of Aikido',
+    intro:
+      "Tomita Sensei discusses the essence of Aikido in a series of videos, offering an important source of information that summarizes the fundamental principles of our school. You can watch them on our school's YouTube channel.",
+  },
   common: {
     hamburger: {
       close: 'Close',
@@ -34,6 +39,7 @@ const enMessages: Messages = {
       email: 'E-mail',
       practicalInfo: 'Practical information',
     },
+    readMore: 'Read more',
   },
 };
 

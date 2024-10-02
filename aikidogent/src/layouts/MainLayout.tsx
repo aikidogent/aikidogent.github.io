@@ -12,14 +12,15 @@ type Banner = {
 type Props = {
   isHomepage?: boolean;
   pageTitle?: string;
-  banner?: Banner;
+  //banner?: Banner;
+  bannerId?: string;
   children?: React.ReactNode;
 };
 
 export const MainLayout: FC<Props> = ({
   isHomepage,
   pageTitle,
-  banner,
+  bannerId,
   children,
 }) => (
   <>
@@ -27,16 +28,16 @@ export const MainLayout: FC<Props> = ({
       <div
         className="banner"
         style={{
-          backgroundImage: banner
-            ? `url(/images/${banner.filename})`
+          backgroundImage: bannerId
+            ? `url(/images/${bannerId})` //`url(/images/${banner.filename})`
             : 'url(/images/hp-banner.jpg)',
         }}
       >
         <Image
-          src={banner ? `/images/${banner.filename}` : '/images/hp-banner.jpg'}
-          alt={banner ? banner.alt : 'Aikido Go Ryu dojo'}
-          width={banner ? banner.width : 1500}
-          height={banner ? banner.height : 1187}
+          src={bannerId ? `/images/${bannerId}` : '/images/hp-banner.jpg'}
+          alt={'Aikido Go Ryu dojo'}
+          width={1500}
+          height={1187}
         />
       </div>
       <InfoSection isHomepage={isHomepage} />
