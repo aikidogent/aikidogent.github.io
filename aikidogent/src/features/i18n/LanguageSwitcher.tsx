@@ -1,14 +1,12 @@
-import { FC, useTransition } from 'react';
+import { useTransition } from 'react';
 import { useParams } from 'next/navigation';
 import { useLocale } from 'next-intl';
-import { Link, usePathname, useRouter } from '@/navigation';
+import { usePathname, useRouter } from '@/navigation';
 
-type Props = {};
-
-export const LanguageSwitcher: FC<Props> = ({}) => {
+export const LanguageSwitcher = () => {
   const currentLocale = useLocale();
   const router = useRouter();
-  const [isPending, startTransition] = useTransition();
+  const [_, startTransition] = useTransition();
   const pathname = usePathname();
   const params = useParams();
 

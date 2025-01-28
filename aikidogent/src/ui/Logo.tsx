@@ -1,7 +1,6 @@
 'use client';
 
 import { FC } from 'react';
-import styled from '@emotion/styled';
 import { Link } from '@/navigation';
 
 type Props = {
@@ -52,25 +51,3 @@ export const Logo: FC<Props> = ({ type }) => (
     </div>
   </Link>
 );
-
-const SC = {
-  Container: styled.div``,
-  DesktopContainer: styled.div`
-    position: absolute;
-    top: -7rem;
-    background-image: url('/images/desktop-logo-bg.jpg');
-    background-size: auto 100%;
-    background-position: bottom center;
-    width: 30rem;
-    height: 37rem;
-    z-index: 999;
-
-    svg {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      height: calc(100% - 12rem);
-    }
-  `,
-} as const;
