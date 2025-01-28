@@ -14,7 +14,7 @@ type Props = {
 const Page: FC<Props> = async ({ params: { locale } }) => {
   unstable_setRequestLocale(locale);
 
-  const data = await getBasicPage(61, locale);
+  const data = await getBasicPage(360, locale);
 
   return (
     <MainLayout pageTitle={data.title} bannerId={data.image_id}>

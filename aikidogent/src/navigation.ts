@@ -12,7 +12,7 @@ export const pathnames = {
   },
   '/dojo': {
     nl: '/onze-dojo',
-    en: '/dojo',
+    en: '/our-dojo',
   },
   '/practical-information': {
     nl: '/praktische-informatie',

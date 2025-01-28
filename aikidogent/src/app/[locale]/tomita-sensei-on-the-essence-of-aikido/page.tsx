@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { unstable_setRequestLocale } from 'next-intl/server';
 import { getBasicPage } from '@/features/basic-pages';
 import { SupportedLocale } from '@/features/i18n';
 import { MainLayout } from '@/layouts';
@@ -14,7 +14,7 @@ type Props = {
 const Page: FC<Props> = async ({ params: { locale } }) => {
   unstable_setRequestLocale(locale);
 
-  const data = await getBasicPage(200, locale);
+  const data = await getBasicPage(420, locale);
 
   return (
     <MainLayout pageTitle={data.title} bannerId={data.image_id}>

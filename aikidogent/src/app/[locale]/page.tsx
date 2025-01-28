@@ -20,9 +20,9 @@ const Home: FC<Props> = ({ params: { locale } }) => {
   return (
     <MainLayout isHomepage>
       <div className="hp-teasers">
-        <Teaser basicPageId={60} locale={locale} href="/join-any-time" />
+        <Teaser basicPageId={400} locale={locale} href="/join-any-time" />
         <Teaser
-          basicPageId={200}
+          basicPageId={420}
           locale={locale}
           href="/tomita-sensei-on-the-essence-of-aikido"
         />

@@ -26,7 +26,11 @@ export const Teaser: FC<Props> = async ({ basicPageId, locale, href }) => {
     >
       <div
         className="image"
-        style={{ backgroundImage: `url(/images/${data.image_id})` }}
+        style={{
+          backgroundImage: data.image_id
+            ? `url(${process.env.NEXT_PUBLIC_API_ROUTE}/images/${data.image_id})`
+            : 'url(/images/hp-banner.jpg)',
+        }}
       />
       <div className="content">
         <h3>{data.title}</h3>

@@ -360,16 +360,22 @@ body.component {
   }
 }
 
-.image-left .image-wrapper {
+.ck-content {
+  h3 {
+    clear: both;
+  }
+}
+
+.image.image-style-align-left {
   display: block;
   float: left;
-  width: 24rem;
+  width: auto;
   height: auto;
-  margin-right: 2rem;
+  margin: 0 3rem 3rem 0;
 }
 
 @media (max-width: 640px) {
-  .image-left .image-wrapper {
+  .image.image-style-align-left {
     float: none;
     width: 100%;
     height: 30rem;
@@ -377,7 +383,7 @@ body.component {
     position: relative;
     margin-bottom: 3rem;
   }
-  .image-left .image-wrapper img {
+  .image.image-style-align-left img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -666,7 +672,7 @@ nav ul li span.divider {
   left: 0;
   height: 100%;
   width: 9rem;
-  background-color: #ff4040;
+  background-color: #ffffff;
   background-size: cover;
   background-position: center center;
 }

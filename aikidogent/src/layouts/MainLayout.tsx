@@ -12,7 +12,6 @@ type Banner = {
 type Props = {
   isHomepage?: boolean;
   pageTitle?: string;
-  //banner?: Banner;
   bannerId?: string;
   children?: React.ReactNode;
 };
@@ -29,7 +28,7 @@ export const MainLayout: FC<Props> = ({
         className="banner"
         style={{
           backgroundImage: bannerId
-            ? `url(/images/${bannerId})` //`url(/images/${banner.filename})`
+            ? `url(${process.env.NEXT_PUBLIC_API_ROUTE}/images/${bannerId})`
             : 'url(/images/hp-banner.jpg)',
         }}
       >
