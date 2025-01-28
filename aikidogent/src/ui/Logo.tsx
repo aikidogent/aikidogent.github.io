@@ -1,7 +1,7 @@
 'use client';
 
 import { FC } from 'react';
-import { Link } from '@/navigation';
+import { Link } from '@/i18n/routing';
 
 type Props = {
   type: 'desktop' | 'mobile';

@@ -1,8 +1,11 @@
+import { createNavigation } from 'next-intl/navigation';
+import { defineRouting, Pathnames } from 'next-intl/routing';
 import {
-  createLocalizedPathnamesNavigation,
-  Pathnames,
-} from 'next-intl/navigation';
-import { localePrefix, locales } from '@/features/i18n';
+  defaultLocale,
+  localeDetection,
+  localePrefix,
+  locales,
+} from './config';
 
 export const pathnames = {
   '/': '/',
@@ -31,11 +34,17 @@ export const pathnames = {
     nl: '/tomita-sensei-over-de-essentie-van-aikido',
     en: '/tomita-sensei-on-the-essence-of-aikido',
   },
-} satisfies Pathnames<typeof locales>;
+} as const satisfies Pathnames<typeof locales>;
 
+export const routing = defineRouting({
+  locales,
+  defaultLocale,
+  localeDetection,
+  localePrefix,
+  pathnames,
+});
+
+// Lightweight wrappers around Next.js' navigation APIs
+// that will consider the routing configuration
 export const { Link, redirect, usePathname, useRouter, getPathname } =
-  createLocalizedPathnamesNavigation({
-    locales,
-    localePrefix,
-    pathnames: pathnames as typeof pathnames & Record<string & {}, string>,
-  });
+  createNavigation(routing);

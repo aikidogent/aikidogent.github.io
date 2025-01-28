@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
+import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import { getBasicPage } from '@/features/basic-pages/helpers';
-import { SupportedLocale } from '@/features/i18n';
-import { getPathname, Link } from '@/navigation';
+import { SupportedLocale } from '@/i18n';
+import { getPathname } from '@/i18n/routing';
 
 type Props = {
   basicPageId: number;
@@ -19,9 +20,8 @@ export const Teaser: FC<Props> = async ({ basicPageId, locale, href }) => {
       className="teaser"
       href={getPathname({
         locale,
-        href: {
-          pathname: href,
-        },
+        // @ts-expect-error -- typing issue
+        href,
       })}
     >
       <div

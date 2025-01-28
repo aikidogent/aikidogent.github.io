@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { NewsTeaser } from '@/features/news/types';
-import { Link } from '@/navigation';
+import { Link } from '@/i18n/routing';
 
 export const NewsOverviewItem: FC<NewsTeaser> = async ({
   id,

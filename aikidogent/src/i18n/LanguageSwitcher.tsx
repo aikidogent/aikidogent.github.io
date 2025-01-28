@@ -1,7 +1,7 @@
 import { useTransition } from 'react';
 import { useParams } from 'next/navigation';
 import { useLocale } from 'next-intl';
-import { usePathname, useRouter } from '@/navigation';
+import { usePathname, useRouter } from './routing';
 
 export const LanguageSwitcher = () => {
   const currentLocale = useLocale();

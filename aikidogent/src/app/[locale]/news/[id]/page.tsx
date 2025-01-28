@@ -1,17 +1,22 @@
 import { FC } from 'react';
-import { SupportedLocale } from '@/features/i18n';
+import { setRequestLocale } from 'next-intl/server';
 import { getNewsItem } from '@/features/news';
+import { SupportedLocale } from '@/i18n';
 import { MainLayout } from '@/layouts';
 import { preProcessContent } from '@/utils';
 
 type Props = {
-  params: {
+  params: Promise<{
     id: string;
     locale: SupportedLocale;
-  };
+  }>;
 };
 
-const Page: FC<Props> = async ({ params: { id, locale } }) => {
+const Page: FC<Props> = async ({ params }) => {
+  const { locale, id } = await params;
+
+  setRequestLocale(locale);
+
   const data = await getNewsItem(id, locale);
 
   return (

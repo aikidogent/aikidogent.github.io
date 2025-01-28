@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { Roboto } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
-import { locales, SupportedLocale } from '@/features/i18n';
+import { getMessages, setRequestLocale } from 'next-intl/server';
+import { locales, SupportedLocale } from '@/i18n';
 import { Logo } from '@/ui/Logo';
 import '@/ui/main.css';
 import { MobileMenuContextProvider } from '@/context';
@@ -19,9 +19,9 @@ export const metadata = {
 
 type Props = {
   children?: React.ReactNode;
-  params: {
+  params: Promise<{
     locale: SupportedLocale;
-  };
+  }>;
 };
 
 const roboto = Roboto({
@@ -34,8 +34,10 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-const RootLayout: FC<Props> = async ({ children, params: { locale } }) => {
-  unstable_setRequestLocale(locale);
+const RootLayout: FC<Props> = async ({ children, params }) => {
+  const { locale } = await params;
+
+  setRequestLocale(locale);
 
   const messages = await getMessages();
 

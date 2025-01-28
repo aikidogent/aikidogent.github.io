@@ -3,8 +3,8 @@
 import React, { FC } from 'react';
 import { useTranslations } from 'next-intl';
 import { useMobileMenu } from '@/context';
-import { LanguageSwitcher } from '@/features/i18n/LanguageSwitcher';
-import { Link, usePathname } from '@/navigation';
+import { LanguageSwitcher } from '@/i18n/LanguageSwitcher';
+import { Link, usePathname } from '@/i18n/routing';
 
 type Props = {};
 

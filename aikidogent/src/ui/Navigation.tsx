@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { useTranslations } from 'next-intl';
-import { LanguageSwitcher } from '@/features/i18n/LanguageSwitcher';
-import { Link, usePathname } from '@/navigation';
+import { LanguageSwitcher } from '@/i18n/LanguageSwitcher';
+import { Link, usePathname } from '@/i18n/routing';
 import { Hamburger } from '@/ui/Hamburger';
 
 export const Navigation = () => {

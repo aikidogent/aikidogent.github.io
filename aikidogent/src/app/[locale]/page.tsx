@@ -1,21 +1,20 @@
 import React, { FC } from 'react';
-import { useTranslations } from 'next-intl';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { Teaser } from '@/features/basic-pages/Teaser';
-import { SupportedLocale } from '@/features/i18n';
 import { NewsOverview } from '@/features/news';
+import { SupportedLocale } from '@/i18n';
 import { MainLayout } from '@/layouts';
 
 type Props = {
-  params: {
+  params: Promise<{
     locale: SupportedLocale;
-  };
+  }>;
 };
 
-const Home: FC<Props> = ({ params: { locale } }) => {
-  unstable_setRequestLocale(locale);
+const Home: FC<Props> = async ({ params }) => {
+  const { locale } = await params;
 
-  const t = useTranslations('homepage');
+  setRequestLocale(locale);
 
   return (
     <MainLayout isHomepage>
