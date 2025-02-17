@@ -4,12 +4,13 @@ import { Link } from '@/i18n/routing';
 
 export const NewsOverviewItem: FC<NewsTeaser> = async ({
   id,
+  slug,
   image_id,
   title,
   teaser,
 }) => (
   <li className="news-teaser" key={id}>
-    <Link href={{ pathname: '/news/[id]', params: { id: id } }}>
+    <Link href={{ pathname: '/news/[id]', params: { id: slug ?? '' } }}>
       {image_id ? (
         <div
           className="image"

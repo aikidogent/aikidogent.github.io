@@ -7,17 +7,17 @@ import { preProcessContent } from '@/utils';
 
 type Props = {
   params: Promise<{
-    id: string;
+    slug: string;
     locale: SupportedLocale;
   }>;
 };
 
 const Page: FC<Props> = async ({ params }) => {
-  const { locale, id } = await params;
+  const { locale, slug } = await params;
 
   setRequestLocale(locale);
 
-  const data = await getNewsItem(id, locale);
+  const data = await getNewsItem(slug, locale);
 
   return (
     <MainLayout pageTitle={data.title} bannerId={data.image_id}>

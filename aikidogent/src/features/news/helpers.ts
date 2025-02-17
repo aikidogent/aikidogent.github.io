@@ -1,12 +1,12 @@
-import { SupportedLocale } from '@/features/i18n';
 import { NewsDetail } from '@/features/news/types';
+import { SupportedLocale } from '@/i18n';
 
 export const getNewsItem = async (
-  id: string,
+  slug: string,
   locale: SupportedLocale,
 ): Promise<NewsDetail> => {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_ROUTE}/news/${id}?language=${locale}`,
+    `${process.env.NEXT_PUBLIC_API_ROUTE}/news/${slug}?language=${locale}`,
   );
 
   if (!res.ok) {

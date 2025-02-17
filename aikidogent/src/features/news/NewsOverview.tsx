@@ -1,7 +1,6 @@
 import { getLocale, getTranslations } from 'next-intl/server';
-import { SupportedLocale } from '@/features/i18n';
 import { NewsOverviewItem } from '@/features/news/NewsOverviewItem';
-import { Link } from '@/navigation';
+import { SupportedLocale } from '@/i18n';
 import { NewsList } from './types';
 
 const getNews = async (locale: SupportedLocale): Promise<NewsList> => {
@@ -25,9 +24,9 @@ export const NewsOverview = async () => {
     <div className="news">
       <h2>{t('title')}</h2>
       <ul>
-        {data.items.map((item) => (
-          <NewsOverviewItem key={item.id} {...item} />
-        ))}
+        {data.items.map((item) =>
+          item.slug ? <NewsOverviewItem key={item.id} {...item} /> : null,
+        )}
       </ul>
     </div>
   );

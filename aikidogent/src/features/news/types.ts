@@ -1,5 +1,6 @@
 export type NewsTeaser = {
   id: number;
+  slug?: string;
   title: string;
   teaser: string;
   start_date: string | null;
