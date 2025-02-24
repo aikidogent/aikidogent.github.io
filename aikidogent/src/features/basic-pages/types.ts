@@ -1,4 +1,4 @@
-export type NewsTeaser = {
+export type BasicPageTeaser = {
   id: number;
   slug_nl: string;
   slug_en: string;
@@ -19,21 +19,8 @@ export type LinksItem = {
   href: string;
 };
 
-export type NewsListItem = {
-  id: number;
-  slug: string;
-  title: string;
-  teaser: string;
-  start_date: string | null;
-  end_date: string | null;
-  created: string;
-  modified: string;
-  link: string;
-  image_id: string;
-};
-
-export type NewsList = {
-  items: NewsListItem[];
+export type BasicPageList = {
+  items: BasicPageTeaser[];
   hasMore: boolean;
   limit: number;
   offset: number;
@@ -41,7 +28,7 @@ export type NewsList = {
   links: LinksItem[];
 };
 
-export type NewsDetail = NewsTeaser & {
+export type BasicPageDetail = BasicPageTeaser & {
   content_nl: string;
   content_en: string;
   seo_keywords_nl: string;
@@ -51,7 +38,7 @@ export type NewsDetail = NewsTeaser & {
   links: LinksItem[];
 };
 
-export type ParsedLocalizedNewsDetailContent = {
+export type ParsedLocalizedBasicPageDetailContent = {
   slug: string;
   title: string;
   teaser: string;
@@ -62,10 +49,10 @@ export type ParsedLocalizedNewsDetailContent = {
   };
 };
 
-export type ParsedNewsDetail = {
+export type ParsedBasicPageDetail = {
   id: number;
-  nl: ParsedLocalizedNewsDetailContent;
-  en: ParsedLocalizedNewsDetailContent;
+  nl: ParsedLocalizedBasicPageDetailContent;
+  en: ParsedLocalizedBasicPageDetailContent;
   start_date: string | null;
   end_date: string | null;
   created: string;

@@ -1,23 +1,26 @@
 import { FC } from 'react';
 import { setRequestLocale } from 'next-intl/server';
-import { Teaser } from '@/features/basic-pages/Teaser';
+import { getBasicPage } from '@/features/basic-pages';
 import { MobileMenu } from '@/features/navigation/MobileMenu';
 import { Navigation } from '@/features/navigation/Navigation';
-import { NewsOverview } from '@/features/news';
 import { SupportedLocale } from '@/i18n';
 import { MainLayout } from '@/layouts';
 import { Logo } from '@/ui/Logo';
+import { preProcessContent } from '@/utils';
 
 type Props = {
   params: Promise<{
+    slug: string;
     locale: SupportedLocale;
   }>;
 };
 
-const Home: FC<Props> = async ({ params }) => {
-  const { locale } = await params;
+const BasicPage: FC<Props> = async ({ params }) => {
+  const { locale, slug } = await params;
 
   setRequestLocale(locale);
+
+  const data = await getBasicPage(slug);
 
   return (
     <>
@@ -26,19 +29,19 @@ const Home: FC<Props> = async ({ params }) => {
         <Navigation
           currentLocale={locale}
           translationLinks={{
-            nl: '/nl',
-            en: '/en',
+            nl: `/nl/${data.nl.slug}`,
+            en: `/en/${data.en.slug}`,
           }}
         />
       </header>
       <div className="page-content">
         <Logo type="desktop" />
-        <MainLayout isHomepage>
-          <div className="hp-teasers">
-            <Teaser slug="instappen-kan-op-elk-moment" />
-            <Teaser slug="tomita-sensei-over-de-essentie-van-aikido" />
-          </div>
-          <NewsOverview />
+        <MainLayout pageTitle={data[locale].title} bannerId={data.image_id}>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: preProcessContent(data[locale].content),
+            }}
+          />
         </MainLayout>
       </div>
       <footer>
@@ -47,12 +50,12 @@ const Home: FC<Props> = async ({ params }) => {
       <MobileMenu
         currentLocale={locale}
         translationLinks={{
-          nl: '/nl',
-          en: '/en',
+          nl: `/nl/${data.nl.slug}`,
+          en: `/en/${data.en.slug}`,
         }}
       />
     </>
   );
 };
 
-export default Home;
+export default BasicPage;

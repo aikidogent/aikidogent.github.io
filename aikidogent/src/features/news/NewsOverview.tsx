@@ -24,9 +24,9 @@ export const NewsOverview = async () => {
     <div className="news">
       <h2>{t('title')}</h2>
       <ul>
-        {data.items.map((item) =>
-          item.slug ? <NewsOverviewItem key={item.id} {...item} /> : null,
-        )}
+        {data.items.map((item) => (
+          <NewsOverviewItem key={item.id} {...item} />
+        ))}
       </ul>
     </div>
   );

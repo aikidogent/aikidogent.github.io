@@ -6,8 +6,8 @@ import { locales, SupportedLocale } from '@/i18n';
 import { Logo } from '@/ui/Logo';
 import '@/ui/main.css';
 import { MobileMenuContextProvider } from '@/context';
-import { MobileMenu } from '@/ui/MobileMenu';
-import { Navigation } from '@/ui/Navigation';
+// import { MobileMenu } from '@/ui/MobileMenu';
+import { Navigation } from '@/features/navigation/Navigation';
 
 export const metadata = {
   title: 'Aikido Gent - Ban Sen Juku',
@@ -21,6 +21,7 @@ type Props = {
   children?: React.ReactNode;
   params: Promise<{
     locale: SupportedLocale;
+    slug?: string;
   }>;
 };
 
@@ -35,7 +36,7 @@ export function generateStaticParams() {
 }
 
 const RootLayout: FC<Props> = async ({ children, params }) => {
-  const { locale } = await params;
+  const { locale, slug } = await params;
 
   setRequestLocale(locale);
 
@@ -46,20 +47,7 @@ const RootLayout: FC<Props> = async ({ children, params }) => {
       <body>
         <NextIntlClientProvider messages={messages}>
           <MobileMenuContextProvider>
-            <div className="wrapper">
-              <header>
-                <Logo type="mobile" />
-                <Navigation />
-              </header>
-              <div className="page-content">
-                <Logo type="desktop" />
-                {children}
-              </div>
-              <footer>
-                <p>&copy; 2024 - Ban Sen Juku Go Ryu</p>
-              </footer>
-              <MobileMenu />
-            </div>
+            <div className="wrapper">{children}</div>
           </MobileMenuContextProvider>
         </NextIntlClientProvider>
       </body>

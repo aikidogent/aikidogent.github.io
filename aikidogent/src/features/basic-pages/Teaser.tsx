@@ -1,28 +1,22 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import Link from 'next/link';
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import { getBasicPage } from '@/features/basic-pages/helpers';
 import { SupportedLocale } from '@/i18n';
-import { getPathname } from '@/i18n/routing';
 
 type Props = {
-  basicPageId: number;
-  locale: SupportedLocale;
-  href: string;
+  slug: string;
 };
 
-export const Teaser: FC<Props> = async ({ basicPageId, locale, href }) => {
+export const Teaser = async ({ slug }: Props) => {
   const t = await getTranslations();
-  const data = await getBasicPage(basicPageId, locale);
+  const locale = await getLocale();
+  const data = await getBasicPage(slug);
 
   return (
     <Link
       className="teaser"
-      href={getPathname({
-        locale,
-        // @ts-expect-error -- typing issue
-        href,
-      })}
+      href={`/${locale}/${data[locale as SupportedLocale].slug}`}
     >
       <div
         className="image"
@@ -33,8 +27,8 @@ export const Teaser: FC<Props> = async ({ basicPageId, locale, href }) => {
         }}
       />
       <div className="content">
-        <h3>{data.title}</h3>
-        <p>{data.teaser}</p>
+        <h3>{data[locale as SupportedLocale].title}</h3>
+        <p>{data[locale as SupportedLocale].teaser}</p>
       </div>
       <div className="more-link">{t('common.readMore')}</div>
     </Link>

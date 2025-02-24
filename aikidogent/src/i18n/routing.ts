@@ -9,26 +9,9 @@ import {
 
 export const pathnames = {
   '/': '/',
-  '/what-is-aikido': {
-    nl: '/wat-is-aikido',
-    en: '/what-is-aikido',
-  },
-  '/dojo': {
-    nl: '/onze-dojo',
-    en: '/our-dojo',
-  },
-  '/practical-information': {
-    nl: '/praktische-informatie',
-    en: '/practical-information',
-  },
-  '/join-any-time': {
-    nl: '/instappen-kan-op-elk-moment',
-    en: '/join-any-time',
-  },
-  '/links': '/links',
-  '/news/[id]': {
-    nl: '/nieuws/[id]',
-    en: '/news/[id]',
+  '/news/[slug]': {
+    nl: '/nieuws/[slug]',
+    en: '/news/[slug]',
   },
   '/tomita-sensei-on-the-essence-of-aikido': {
     nl: '/tomita-sensei-over-de-essentie-van-aikido',

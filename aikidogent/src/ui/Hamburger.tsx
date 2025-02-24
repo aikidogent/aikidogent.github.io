@@ -1,4 +1,6 @@
-import React, { FC, useState } from 'react';
+'use client';
+
+import React from 'react';
 import { useTranslations } from 'next-intl';
 import { useMobileMenu } from '@/context';
 
